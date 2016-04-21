@@ -1,0 +1,9 @@
+diff a/Tale/Assembly-CSharp.csproj b/Tale/Assembly-CSharp.csproj	(rejected hunks)
+@@ -49,6 +49,7 @@
+      <Compile Include="Assets\Scripts\Player\scr_playerClimbing.cs" />
+ =======
+      <Compile Include="Assets\Scripts\Player\Scr_CameraController.cs" />
++>>>>>>> 9c0fd8929f688790e516e95b3d30242fc59ff0db
+      <Compile Include="Assets\Scripts\Player\scr_playerController.cs" />
+      <Compile Include="Assets\Scripts\Rope\scr_ropeAttach.cs" />
+      <Compile Include="Assets\scr_simpleFollow.cs" />
