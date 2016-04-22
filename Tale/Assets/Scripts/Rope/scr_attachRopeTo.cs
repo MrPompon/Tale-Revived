@@ -73,7 +73,6 @@ public class scr_attachRopeTo : MonoBehaviour
                     tetherLength = Vector3.Distance(this.transform.position, tetherObject.transform.position);
                     // do slidy slide or pull object
                     //when grounded works add restriction when falling with rope
-                    print("HUGGA HUGGA"); // do slidy thing? this no work well 
                 }
                 if (Input.GetButton("ReelInRope"))
                 {
@@ -141,7 +140,6 @@ public class scr_attachRopeTo : MonoBehaviour
     }
     void FixedUpdate()
     {
-        print(IsGrounded());
         if (!amITethered)
         {
             m_lineRenderer.enabled = false;
