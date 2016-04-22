@@ -17,10 +17,9 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
     private Transform cam;
     private Vector3 camForward;
     private Vector3 move;
-
     public bool aim;
+    private bool m_sliding;
     public float aimingWheight;
-
     public bool lookInCameraDirection;
     Vector3 lookPosition;
 
@@ -55,7 +54,19 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
     private bool m_isAxisInUse;
     private bool arrowIsLoaded;
     private scr_AudioManager m_audioManager;
+
+
+
+    private bool m_Climbing;
+    private GameObject m_ClimableObject;
+    public float m_ClimbingLenght;
+    public float m_MaxClimbingAngle;  // The angle of the top of the object that the player wants to climb
+    public float m_ClimbingSpeed;
+   // private bool m_ViableToClimb = false;
+
     bool ropeAttachedToArrow;
+    private scr_PSM m_psm;
+
     private void Start()
     {
         // get the transform of the main camera
@@ -77,12 +88,60 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
         m_player = GameObject.FindGameObjectWithTag("Player");
         m_rgd = gameObject.GetComponent<Rigidbody>();
         m_audioManager = Camera.main.GetComponent<scr_AudioManager>();
+        m_psm = m_player.GetComponent<scr_PSM>();
+    }
+    void CheckClimbViability()
+    {
+        //Raycast below feet of player to see when done,
+        //raycast top of climable object?? If lvl designer doesnt use it well.
+
+        RaycastHit hit;
+        Ray ray = new Ray(new Vector3(transform.position.x, transform.position.y - 0.7f, transform.position.z), transform.forward);
+        Debug.DrawRay(new Vector3(transform.position.x , transform.position.y - 0.7f, transform.position.z), transform.forward);
+        Debug.DrawRay(transform.position, transform.up,Color.red);
+
+
+
+        if(Physics.Raycast(ray, out hit) && m_psm.GetPlayerState(true) == scr_PSM.Playerstate.state_airborne && m_rgd.velocity.y < 0 )
+        {
+            if (hit.collider.tag == "climbable")
+            {
+                if (Vector3.Distance(hit.point, transform.position) < 2)
+                {
+                    if(hit.collider.gameObject.transform.position.y + hit.collider.bounds.extents.y - transform.position.y < m_ClimbingLenght)
+                    {
+                        ClimbObject(hit.collider.gameObject);
+                    }
+
+                }
+            }
+        }
+    }
+    void ClimbObject(GameObject obj)
+    {
+        m_psm.SetPlayerPose(scr_PSM.PlayerPose.pose_climbing);
+        transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x,
+                    obj.transform.position.y + obj.GetComponent<Collider>().bounds.extents.y, transform.position.z), m_ClimbingSpeed);
+        m_rgd.velocity = new Vector3(0, 0, 0);
 
     }
+    void ClimbingJump()
+    {
+        if(m_psm.GetPlayerPose(true) == scr_PSM.PlayerPose.pose_climbing && CrossPlatformInputManager.GetButtonDown("Jump"))
+        {
+           var localVel = transform.InverseTransformDirection(m_rgd.velocity);
+           localVel.z = 1;
+           localVel.y = 5;
 
-
+           m_rgd.velocity = transform.TransformDirection(localVel);
+            
+        }
+    }
     private void Update()
     {
+        CheckClimbViability();
+        ClimbingJump();
+
         if (Input.GetButtonDown("ChangeEquippedArrow"))
         {
             print("ChangeEquippedArrow" + ropeAttachedToArrow);
@@ -100,20 +159,36 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
         {
             m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
         }
-        aim = Input.GetAxisRaw("AimAxis")>0.2;
+        if(Input.GetKey(KeyCode.T))
+        {
+            m_sliding = true;
+        }
+        else
+        {
+            m_sliding = false;
+        }
+
+
+        aim = Input.GetAxisRaw("AimAxis")>0;  //Controller
+      //  aim = Input.GetMouseButton(1);
+
         if (aim)
         {
             if(Input.GetMouseButtonDown(1))
             {
                 m_audioManager.PlayDrawBow();
             }
-            if (Input.GetAxisRaw("FireAxis") == 1 && m_reloadCounter > m_ReloadTime) //load the bow
+
+            if (Input.GetMouseButton(0) && m_reloadCounter > m_ReloadTime)
+
+            print("AIM");
+            if (Input.GetAxisRaw("FireAxis")>0) //load the bow
+
             {
                 arrowIsLoaded = true;
                 if (currentArrowForce < maxBowLoadupDuration)
                 {
                     currentArrowForce += Time.deltaTime;
-
                 }
             }
             else
@@ -122,7 +197,41 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
             }
             if (arrowIsLoaded)
             {
-                if (Input.GetAxisRaw("FireAxis") ==0 && m_reloadCounter > m_ReloadTime)
+
+             //   anim.SetTrigger("Fire");
+                //GameObject arrow = (GameObject)Instantiate(m_arrowPrefab, m_arrowSpawnpoint.position, m_player.GetComponent<Transform>().rotation);
+                //scr_projectileMovement projMovement = arrow.GetComponent<scr_projectileMovement>();
+                //projMovement.OnProjectileSpawn();
+                //projMovement.SetProjectileOriginator(this.gameObject);
+                //Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0.0f));
+                ////projMovement.AddVelocity(ray.direction, m_projectileSpeed + m_rgd.velocity);
+                //Rigidbody arrowRgd = (Rigidbody)arrow.GetComponent<Rigidbody>();
+
+                //m_audioManager.PlayBowShoot();
+                //// + (m_rgd.velocity / 1))
+                //arrowRgd.AddForce((ray.direction * (m_projectileSpeed + (currentArrowForce * bowAccumulationMultiplier))), ForceMode.Impulse);
+                //m_reloadCounter = 0;
+                //currentArrowForce = 0;
+
+
+                if (Input.GetAxisRaw("FireAxis") == 0 && m_reloadCounter > m_ReloadTime)
+                {
+                    //   anim.SetTrigger("Fire");
+                    GameObject arrow = (GameObject)Instantiate(m_arrowPrefab, m_arrowSpawnpoint.position, m_player.GetComponent<Transform>().rotation);
+                    scr_projectileMovement projMovement = arrow.GetComponent<scr_projectileMovement>();
+                    projMovement.OnProjectileSpawn();
+                    projMovement.SetProjectileOriginator(this.gameObject);
+                    Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0.0f));
+                    //projMovement.AddVelocity(ray.direction, m_projectileSpeed + m_rgd.velocity);
+                    Rigidbody arrowRgd = (Rigidbody)arrow.GetComponent<Rigidbody>();
+                    arrowRgd.AddForce((ray.direction * (m_projectileSpeed + (currentArrowForce * bowAccumulationMultiplier))), ForceMode.Impulse);
+                    m_reloadCounter = 0;
+                    currentArrowForce = 0;
+                    arrowIsLoaded = false;
+                    m_audioManager.PlayBowShoot();
+                }
+
+                if (Input.GetAxisRaw("FireAxis") == 0 && m_reloadCounter > m_ReloadTime)
                 {
                     if (ropeAttachedToArrow)
                     {
@@ -147,7 +256,7 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
                         projMovement.SetRopeAttachedToArrow(ropeAttachedToArrow);
                         projMovement.OnProjectileSpawn();
                         projMovement.SetProjectileOriginator(this.gameObject);
-                        projMovement.GetComponent<LineRenderer>().enabled=false;
+                        projMovement.GetComponent<LineRenderer>().enabled = false;
                         Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0.0f));
                         //projMovement.AddVelocity(ray.direction, m_projectileSpeed + m_rgd.velocity);
                         Rigidbody arrowRgd = (Rigidbody)arrow.GetComponent<Rigidbody>();
@@ -155,14 +264,17 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
                         m_reloadCounter = 0;
                         currentArrowForce = 0;
                         arrowIsLoaded = false;
+                        m_audioManager.PlayBowShoot();
                     }
                 }
+
             }
         }
         else
         {
             m_reloadCounter += Time.deltaTime;
         }
+
     }
     void LateUpdate()
     {
@@ -231,6 +343,7 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
             //anim.SetFloat("Turn", h);
 
         }
+   
 #if !MOBILE_INPUT
 		// walk speed multiplier
 	    if (Input.GetKey(KeyCode.LeftShift)) m_Move *= 0.5f;
@@ -239,7 +352,7 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
         // pass all parameters to the character control script
         if (!currentlyDisabled)
         {
-            m_Character.Move(m_Move, crouch, m_Jump, lookPosition, aim);
+            m_Character.Move(m_Move, crouch, m_Jump,m_sliding,m_Climbing, lookPosition, aim);
             m_Jump = false;
         }
       

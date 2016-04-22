@@ -59,6 +59,7 @@ GameObject:
   - 92: {fileID: 9228496}
   - 124: {fileID: 12479198}
   - 81: {fileID: 8193956}
+  - 114: {fileID: 11483904}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -99,7 +100,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 148434}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.57, y: -0.98, z: 1.01}
+  m_LocalPosition: {x: -5.676445, y: -0.40994287, z: -0.15920067}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 429436}
@@ -185,8 +186,25 @@ MonoBehaviour:
   tiltMin: 50
   lockCursor: 0
   m_CameraResetTime: 1
-  m_AngleDistance: -0.2
-  m_naturalOffset: {x: 0, y: 0, z: 0}
+--- !u!114 &11483904
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 161594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd82c32bad02b2e47be8b01006781952, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  efxSource: {fileID: 0}
+  musicSource: {fileID: 0}
+  lowPitchRange: 0.95
+  highPitchRange: 1.05
+  m_playerSteps: []
+  m_JumpLanding: []
+  DrawBowSound_1: {fileID: 0}
+  ShootBowSound_1: {fileID: 0}
 --- !u!124 &12479198
 Behaviour:
   m_ObjectHideFlags: 1

@@ -29,12 +29,18 @@ public class scr_ThirdPersonCharacter : MonoBehaviour
     float autoTurnThreshold = 10;
     float autoTurnspeed = 20;
     bool isAiming;
+    bool isSliding = false;
     Vector3 currentLookPosition;
     private GameObject m_Player;
     public float m_InAirMaxSpeed;
     scr_AudioManager m_AudioManager;
-
+    public float m_slidingSpeedMultiplier;
+    private float m_defaultSlidingSpeedMultiplier;
+    private float m_defaultMovingTurnSpeed;
     private bool m_playJumpLandingSound = false;
+
+    private bool isClimbing;
+
 	void Start()
 	{
 		m_Animator = GetComponent<Animator>();
@@ -47,15 +53,18 @@ public class scr_ThirdPersonCharacter : MonoBehaviour
 		m_OrigGroundCheckDistance = m_GroundCheckDistance;
         m_PSM = GetComponent<scr_PSM>();
         m_AudioManager = Camera.main.GetComponent<scr_AudioManager>();
+        m_defaultSlidingSpeedMultiplier = m_MoveSpeedMultiplier;
+        m_defaultMovingTurnSpeed = m_MovingTurnSpeed;
 	}
 
 
-	public void Move(Vector3 move, bool crouch, bool jump, Vector3 lookPos, bool aim)
+	public void Move(Vector3 move, bool crouch, bool jump, bool sliding,bool climbing, Vector3 lookPos, bool aim)
 	{
 
 		// convert the world relative moveInput vector into a local-relative
 		// turn amount and forward amount required to head in the desired
 		// direction.
+
 		if (move.magnitude > 1f) move.Normalize();
 		move = transform.InverseTransformDirection(move);
 		CheckGroundStatus();
@@ -64,6 +73,7 @@ public class scr_ThirdPersonCharacter : MonoBehaviour
 		m_ForwardAmount = move.z;
 
         this.isAiming = aim;
+        this.isSliding = sliding;
         this.currentLookPosition = lookPos;
         if(!isAiming && m_PSM.GetPlayerState(true) == scr_PSM.Playerstate.state_grounded )
         {
@@ -76,11 +86,14 @@ public class scr_ThirdPersonCharacter : MonoBehaviour
             m_Player.transform.forward = new Vector3(Camera.main.transform.forward.x, m_Player.transform.forward.y, Camera.main.transform.forward.z);
         }
 
+            Sliding();
+
 		// control and velocity handling is different when grounded and airborne:
 		if (m_IsGrounded)
 		{
 			HandleGroundedMovement(crouch, jump);
             m_PSM.SetPlayerState(scr_PSM.Playerstate.state_grounded);
+            m_PSM.SetPlayerPose(scr_PSM.PlayerPose.pose_running);
 		}
 		else
 		{
@@ -116,7 +129,26 @@ public class scr_ThirdPersonCharacter : MonoBehaviour
 			m_Crouching = false;
 		}
 	}
+    void Sliding()
+    {
+        if (m_IsGrounded && isSliding)
+        {
+            m_Capsule.height = m_Capsule.height / 2f;
+            m_Capsule.center = m_Capsule.center / 2f;
+            //Set animation to sliding also!
+            m_ForwardAmount = 1;
+            m_MoveSpeedMultiplier = m_slidingSpeedMultiplier;
+            m_MovingTurnSpeed = 0;
+            
+        }
+        else
+        {
+            m_MoveSpeedMultiplier = m_defaultSlidingSpeedMultiplier;
+            m_MovingTurnSpeed = m_defaultMovingTurnSpeed;
+        }
 
+
+    }
 	void PreventStandingInLowHeadroom()
 	{
 		// prevent standing up in crouch-only zones
@@ -181,15 +213,14 @@ public class scr_ThirdPersonCharacter : MonoBehaviour
 			// don't use that while airborne
 			m_Animator.speed = 1;
 		}
-        if(m_IsGrounded && m_ForwardAmount != 0)
+        if(m_IsGrounded && m_ForwardAmount >=0.2)
         {
             PlayRunningSounds();
         }
 	}
     void PlayRunningSounds()
     {
-        m_AudioManager.RandomizeSfx(0.3f,m_AudioManager.GetFootStepSounds());
-
+        m_AudioManager.RandomizeSfx(0.3f, m_AudioManager.GetFootStepSounds());
     }
 	void HandleAirborneMovement()
 	{
@@ -279,8 +310,12 @@ public class scr_ThirdPersonCharacter : MonoBehaviour
             m_playJumpLandingSound = true;
 			m_IsGrounded = false;
 			m_GroundNormal = Vector3.up;
-
 			m_Animator.applyRootMotion = false;
+            if(isAiming )
+            {
+                m_Rigidbody.velocity = Vector3.zero;
+                m_ForwardAmount = 0;
+            }
 		}
 	}
 }
