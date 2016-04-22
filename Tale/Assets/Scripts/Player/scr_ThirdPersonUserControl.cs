@@ -66,7 +66,7 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
 
     bool ropeAttachedToArrow;
     private scr_PSM m_psm;
-
+    public float m_WallClimbingSpeed;
     private void Start()
     {
         // get the transform of the main camera
@@ -96,11 +96,11 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
         //raycast top of climable object?? If lvl designer doesnt use it well.
 
         RaycastHit hit;
-        Ray ray = new Ray(new Vector3(transform.position.x, transform.position.y - 0.7f, transform.position.z), transform.forward);
-        Debug.DrawRay(new Vector3(transform.position.x , transform.position.y - 0.7f, transform.position.z), transform.forward);
+        Ray ray = new Ray(new Vector3(transform.position.x, transform.position.y , transform.position.z), transform.forward);
+        Debug.DrawRay(new Vector3(transform.position.x , transform.position.y , transform.position.z), transform.forward);
         Debug.DrawRay(transform.position, transform.up,Color.red);
 
-
+       
 
         if(Physics.Raycast(ray, out hit) && m_psm.GetPlayerState(true) == scr_PSM.Playerstate.state_airborne && m_rgd.velocity.y < 0 )
         {
@@ -110,37 +110,55 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
                 {
                     if(hit.collider.gameObject.transform.position.y + hit.collider.bounds.extents.y - transform.position.y < m_ClimbingLenght)
                     {
-                        ClimbObject(hit.collider.gameObject);
+                        ClimbObject(hit.collider.gameObject,hit);
                     }
-
                 }
             }
         }
     }
-    void ClimbObject(GameObject obj)
+    void ClimbObject(GameObject obj, RaycastHit hit)
     {
-        m_psm.SetPlayerPose(scr_PSM.PlayerPose.pose_climbing);
+        m_psm.SetPlayerPose(scr_PSM.PlayerPose.pose_wallclimbing);
         transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x,
                     obj.transform.position.y + obj.GetComponent<Collider>().bounds.extents.y, transform.position.z), m_ClimbingSpeed);
         m_rgd.velocity = new Vector3(0, 0, 0);
+        Debug.Log(hit.normal);
+      //  transform.rotation = new Quaternion(hit.normal.x, hit.normal.y,hit.normal.z, transform.rotation.w);
 
     }
     void ClimbingJump()
     {
-        if(m_psm.GetPlayerPose(true) == scr_PSM.PlayerPose.pose_climbing && CrossPlatformInputManager.GetButtonDown("Jump"))
+        if(m_psm.GetPlayerPose(true) == scr_PSM.PlayerPose.pose_wallclimbing && CrossPlatformInputManager.GetButtonDown("Jump"))
         {
            var localVel = transform.InverseTransformDirection(m_rgd.velocity);
            localVel.z = 1;
-           localVel.y = 5;
+           localVel.y = 7;
 
            m_rgd.velocity = transform.TransformDirection(localVel);
             
+        }
+    }
+    void WallClimbing()
+    {
+        if(m_psm.GetPlayerPose(true) == scr_PSM.PlayerPose.pose_wallclimbing )
+        {
+            
+            float h = CrossPlatformInputManager.GetAxis("Horizontal");
+            float v = CrossPlatformInputManager.GetAxis("Vertical");
+
+            var localVel = transform.InverseTransformDirection(m_rgd.velocity);
+           // localVel.z = m_WallClimbingSpeed * v;
+            localVel.x = m_WallClimbingSpeed * h;
+
+            m_rgd.velocity = transform.TransformDirection(localVel);
+
         }
     }
     private void Update()
     {
         CheckClimbViability();
         ClimbingJump();
+        WallClimbing();
 
         if (Input.GetButtonDown("ChangeEquippedArrow"))
         {

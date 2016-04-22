@@ -37,6 +37,7 @@ public class scr_PSM : MonoBehaviour {
         pose_jogging,
         pose_climbing,
         pose_idle,
+        pose_wallclimbing,
     }
 
     Playerstate m_playerState;

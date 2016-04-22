@@ -85,9 +85,7 @@ public class scr_ThirdPersonCharacter : MonoBehaviour
             //
             m_Player.transform.forward = new Vector3(Camera.main.transform.forward.x, m_Player.transform.forward.y, Camera.main.transform.forward.z);
         }
-
             Sliding();
-
 		// control and velocity handling is different when grounded and airborne:
 		if (m_IsGrounded)
 		{
