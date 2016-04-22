@@ -246,7 +246,7 @@ GameObject:
   - 114: {fileID: 11432172}
   - 114: {fileID: 11419110}
   m_Layer: 0
-  m_Name: New Prefab
+  m_Name: Alva_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2503,7 +2503,7 @@ MonoBehaviour:
   m_RunCycleLegOffset: 0.2
   m_MoveSpeedMultiplier: 1
   m_AnimSpeedMultiplier: 1
-  m_GroundCheckDistance: 0.1
+  m_GroundCheckDistance: 0.4
   m_InAirMovementSpeed: 0
   m_InAirMaxSpeed: 0
 --- !u!120 &12097176
