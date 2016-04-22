@@ -18,6 +18,7 @@ public class AlertState : IEnemyState
     {
         BetterRay();
         Search();
+        enemy.m_animator.SetBool("IsSearching", true);
     }
     public void OnTriggerEnter(Collider colli)
     {
@@ -35,19 +36,23 @@ public class AlertState : IEnemyState
     {
         enemy.currentState = enemy.patrolState;
         searchTimer = 0f;
+        enemy.m_animator.SetBool("IsSearching", false);
     }
     public void ToChaseState()
     {
         enemy.currentState = enemy.chaseState;
         searchTimer = 0f;
+        enemy.m_animator.SetBool("IsSearching", false);
     }
     public void ToAttackState()
     {
         enemy.currentState = enemy.attackState;
+        enemy.m_animator.SetBool("IsSearching", false);
     }
     public void ToRetreatState()
     {
         enemy.currentState = enemy.retreatState;
+        enemy.m_animator.SetBool("IsSearching", false);
     }
     void BetterRay()
     {
@@ -78,7 +83,7 @@ public class AlertState : IEnemyState
     {
         enemy.meshRendererFlag.material.color = Color.yellow;
         enemy.navMeshAgent.Stop();
-        enemy.transform.Rotate(0, enemy.searchTurnSpeed * Time.deltaTime,0); //rotates on this points and it stopped above.
+        //enemy.transform.Rotate(0, enemy.searchTurnSpeed * Time.deltaTime,0); //rotates on this points and it stopped above.
         searchTimer += Time.deltaTime;
         if (searchTimer >= enemy.searchDuration)
         {

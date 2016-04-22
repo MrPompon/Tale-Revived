@@ -181,7 +181,7 @@ public class scr_ThirdPersonCharacter : MonoBehaviour
 			// don't use that while airborne
 			m_Animator.speed = 1;
 		}
-        if(m_IsGrounded && m_ForwardAmount != 0)
+        if(m_IsGrounded && m_ForwardAmount >=0.2)
         {
             PlayRunningSounds();
         }

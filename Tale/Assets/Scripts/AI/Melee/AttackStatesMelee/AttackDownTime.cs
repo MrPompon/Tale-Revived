@@ -25,6 +25,7 @@ public class AttackDownTime : IAttackStates {
     public void UpdateState()
     {
         ChannelDownTime();
+        enemy.m_animator.SetBool("IsAttacking", false);
     }
     public void ToAttackWindUp()
     {

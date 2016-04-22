@@ -11,6 +11,7 @@ public class StatePatternEnemy : MonoBehaviour {
     [HideInInspector]
     public float sightRange;
     public Vector3 offset = new Vector3(0, 0.5f, 0); //lookoffset
+    Vector3 prevFramePos;
     public MeshRenderer meshRendererFlag;
 
     public float attackRange = 4.0f;
@@ -25,6 +26,9 @@ public class StatePatternEnemy : MonoBehaviour {
     public float FOV_angle;
     public SphereCollider m_sphereCol;
     public bool drawGizmos;
+    [HideInInspector]public Animator m_animator;
+    Vector2 smoothDeltaPosition = Vector2.zero;
+    Vector2 velocity = Vector2.zero;
     [HideInInspector]public Transform chaseTarget;
     [HideInInspector]public IEnemyState currentState;
     [HideInInspector]public AlertState alertState;
@@ -35,6 +39,7 @@ public class StatePatternEnemy : MonoBehaviour {
     [HideInInspector]public NavMeshAgent navMeshAgent;
     private void Awake()
     {
+        prevFramePos = this.transform.position;
         chaseState = new ChaseState(this);
         alertState = new AlertState(this);
         patrolState = new PatrolState(this);
@@ -46,6 +51,7 @@ public class StatePatternEnemy : MonoBehaviour {
         navMeshAgent = GetComponent<NavMeshAgent>();
         weaponSwingRenderer = GetComponent<LineRenderer>();
         m_sphereCol = GetComponent<SphereCollider>();
+        m_animator = GetComponent<Animator>();
     }
 	void Start () {
         chaseTarget = GameObject.FindGameObjectWithTag("Player").transform;
@@ -56,6 +62,7 @@ public class StatePatternEnemy : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         currentState.UpdateState();
+        UpdateAnimator();
 	}
     void OnDrawGizmos()
     {
@@ -85,6 +92,33 @@ public class StatePatternEnemy : MonoBehaviour {
                 }
             }
         }
+    }
+    private void UpdateAnimator(){
+        //http://docs.unity3d.com/Manual/nav-CouplingAnimationAndNavigation.html
+
+        Vector3 worldDeltaPosition = transform.position-prevFramePos  ;
+
+        // Map 'worldDeltaPosition' to local space
+        float dx = Vector3.Dot (transform.right, worldDeltaPosition);
+        float dy = Vector3.Dot (transform.forward, worldDeltaPosition);
+        Vector2 deltaPosition = new Vector2 (dx, dy);
+
+        // Low-pass filter the deltaMove
+        float smooth = Mathf.Min(1.0f, Time.deltaTime/0.15f);
+        smoothDeltaPosition = Vector2.Lerp (smoothDeltaPosition, deltaPosition, smooth);
+
+        // Update velocity if time advances
+        if (Time.deltaTime > 1e-5f)
+            velocity = smoothDeltaPosition / Time.deltaTime;
+
+        bool shouldMove = velocity.magnitude > 0.5f && navMeshAgent.remainingDistance > navMeshAgent.radius;
+
+        // Update animation parameters
+        m_animator.SetBool("shouldMove", shouldMove);
+        m_animator.SetFloat("Forward", velocity.y);
+        m_animator.SetFloat("Turn", navMeshAgent.velocity.x);
+        //print(velocity);
+        prevFramePos = this.transform.position;
     }
     private void OnTriggerEnter(Collider other)
     {

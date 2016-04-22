@@ -36,6 +36,8 @@ public class AttackOnGoing : IAttackStates {
     {
         Debug.Log("ATTACKING");
         SimulateAttackRays();
+        enemy.m_animator.SetBool("IsReloading", false);
+        enemy.m_animator.SetBool("IsAttacking", true);
     }
     public void ToAttackWindUp()
     {

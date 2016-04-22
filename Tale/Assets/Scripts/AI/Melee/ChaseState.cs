@@ -32,7 +32,7 @@ public class ChaseState : IEnemyState
     }
     public void ToPatrolState()
     {
-
+        enemy.currentState = enemy.patrolState;
     }
     public void ToChaseState()
     {
@@ -71,7 +71,7 @@ public class ChaseState : IEnemyState
             }
             else
             {
-                ToAlertState();
+                ToPatrolState();
             }
         }
     }
