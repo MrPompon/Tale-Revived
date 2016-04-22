@@ -21,7 +21,6 @@ public class scr_checkpointBehaviour : MonoBehaviour {
     {
         if(colli.gameObject.CompareTag("checkpoint"))
         {
-            Debug.Log("Checkpoint Reached");
             m_LatestCheckPoint = colli.gameObject;
         }
         else if(colli.gameObject.CompareTag("death"))

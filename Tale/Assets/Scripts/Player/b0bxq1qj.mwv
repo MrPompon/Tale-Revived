@@ -62,7 +62,7 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
     public float m_ClimbingLenght;
     public float m_MaxClimbingAngle;  // The angle of the top of the object that the player wants to climb
     public float m_ClimbingSpeed;
-   // private bool m_ViableToClimb = false;
+
 
     bool ropeAttachedToArrow;
     private scr_PSM m_psm;
@@ -92,25 +92,19 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
     }
     void CheckClimbViability()
     {
-        //Raycast below feet of player to see when done,
-        //raycast top of climable object?? If lvl designer doesnt use it well.
-
         RaycastHit hit;
-        Ray ray = new Ray(new Vector3(transform.position.x, transform.position.y - 0.7f, transform.position.z), transform.forward);
-        Debug.DrawRay(new Vector3(transform.position.x , transform.position.y - 0.7f, transform.position.z), transform.forward);
+        Ray ray = new Ray(new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z), transform.forward);
+        Debug.DrawRay(new Vector3(transform.position.x , transform.position.y + 1.5f, transform.position.z), transform.forward);
         Debug.DrawRay(transform.position, transform.up,Color.red);
-
-
-
         if(Physics.Raycast(ray, out hit) && m_psm.GetPlayerState(true) == scr_PSM.Playerstate.state_airborne && m_rgd.velocity.y < 0 )
         {
             if (hit.collider.tag == "climbable")
             {
                 if (Vector3.Distance(hit.point, transform.position) < 2)
                 {
-                    if(hit.collider.gameObject.transform.position.y + hit.collider.bounds.extents.y - transform.position.y < m_ClimbingLenght)
+                    if(hit.collider.gameObject.transform.position.y -transform.position.y < m_ClimbingLenght)
                     {
-                        ClimbObject(hit.collider.gameObject);
+                        ClimbObject(hit.collider.gameObject)
                     }
 
                 }
@@ -119,28 +113,13 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
     }
     void ClimbObject(GameObject obj)
     {
-        m_psm.SetPlayerPose(scr_PSM.PlayerPose.pose_climbing);
         transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x,
                     obj.transform.position.y + obj.GetComponent<Collider>().bounds.extents.y, transform.position.z), m_ClimbingSpeed);
-        m_rgd.velocity = new Vector3(0, 0, 0);
-
-    }
-    void ClimbingJump()
-    {
-        if(m_psm.GetPlayerPose(true) == scr_PSM.PlayerPose.pose_climbing && CrossPlatformInputManager.GetButtonDown("Jump"))
-        {
-           var localVel = transform.InverseTransformDirection(m_rgd.velocity);
-           localVel.z = 1;
-           localVel.y = 5;
-
-           m_rgd.velocity = transform.TransformDirection(localVel);
-            
-        }
+        m_rgd.velocity = new Vector3(m_rgd.velocity.x, 0, m_rgd.velocity.z);
     }
     private void Update()
     {
         CheckClimbViability();
-        ClimbingJump();
 
         if (Input.GetButtonDown("ChangeEquippedArrow"))
         {
@@ -170,6 +149,7 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
 
 
         aim = Input.GetAxisRaw("AimAxis")>0;  //Controller
+
       //  aim = Input.GetMouseButton(1);
 
         if (aim)

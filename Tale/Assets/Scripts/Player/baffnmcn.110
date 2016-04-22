@@ -116,31 +116,18 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
                 }
             }
         }
+ 
     }
     void ClimbObject(GameObject obj)
     {
-        m_psm.SetPlayerPose(scr_PSM.PlayerPose.pose_climbing);
         transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x,
                     obj.transform.position.y + obj.GetComponent<Collider>().bounds.extents.y, transform.position.z), m_ClimbingSpeed);
-        m_rgd.velocity = new Vector3(0, 0, 0);
+        m_rgd.velocity = new Vector3(m_rgd.velocity.x, m_rgd.velocity.y, m_rgd.velocity.z);
 
-    }
-    void ClimbingJump()
-    {
-        if(m_psm.GetPlayerPose(true) == scr_PSM.PlayerPose.pose_climbing && CrossPlatformInputManager.GetButtonDown("Jump"))
-        {
-           var localVel = transform.InverseTransformDirection(m_rgd.velocity);
-           localVel.z = 1;
-           localVel.y = 5;
-
-           m_rgd.velocity = transform.TransformDirection(localVel);
-            
-        }
     }
     private void Update()
     {
         CheckClimbViability();
-        ClimbingJump();
 
         if (Input.GetButtonDown("ChangeEquippedArrow"))
         {
@@ -170,6 +157,7 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
 
 
         aim = Input.GetAxisRaw("AimAxis")>0;  //Controller
+
       //  aim = Input.GetMouseButton(1);
 
         if (aim)

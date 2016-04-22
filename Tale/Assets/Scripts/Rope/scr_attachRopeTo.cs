@@ -141,7 +141,6 @@ public class scr_attachRopeTo : MonoBehaviour
     }
     void FixedUpdate()
     {
-        print(IsGrounded());
         if (!amITethered)
         {
             m_lineRenderer.enabled = false;
