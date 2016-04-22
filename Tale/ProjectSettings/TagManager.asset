@@ -12,6 +12,7 @@ TagManager:
   - checkpoint
   - death
   - climbable
+  - Trigger_activator
   layers:
   - Default
   - TransparentFX

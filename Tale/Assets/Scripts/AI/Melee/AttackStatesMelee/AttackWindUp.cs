@@ -19,6 +19,7 @@ public class AttackWindUp : IAttackStates {
     {
         Debug.Log("YO IM WINDING UP MY ATTACK(AI)");
         WindUpAttack();
+        enemy.m_animator.SetBool("IsReloading", true);
     }
     public void ToAttackWindUp()
     {
