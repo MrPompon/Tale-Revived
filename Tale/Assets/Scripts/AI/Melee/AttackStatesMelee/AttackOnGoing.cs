@@ -20,6 +20,8 @@ public class AttackOnGoing : IAttackStates {
     private readonly StatePatternEnemy enemy;
     private readonly AttackState attackState;
     private List<Transform> hitObjects;
+    bool hasAttacked;
+    float currentAttackTime;
 
     private int cWP;
     public void Start()
@@ -34,10 +36,18 @@ public class AttackOnGoing : IAttackStates {
     }
     public void UpdateState()
     {
-        Debug.Log("ATTACKING");
-        SimulateAttackRays();
-        enemy.m_animator.SetBool("IsReloading", false);
-        enemy.m_animator.SetBool("IsAttacking", true);
+        if (!hasAttacked)
+        {
+            enemy.m_animator.SetBool("IsAttacking", true);
+            Debug.Log("ATTACKING");
+            SimulateAttackRays();
+            hasAttacked = true;
+        }
+        currentAttackTime+=Time.deltaTime;
+        if (currentAttackTime >= enemy.attackDuration)
+        {
+            ToAttackDownTime();
+        }
     }
     public void ToAttackWindUp()
     {
@@ -49,8 +59,11 @@ public class AttackOnGoing : IAttackStates {
     }
     public void ToAttackDownTime()
     {
+        
         attackState.currentAttackState = attackState.downtimeAttackState;
-
+        enemy.m_animator.SetBool("IsAttacking", false);
+        enemy.m_animator.SetBool("IsReloading", true);
+        ResetState();
     }
     void SimulateAttackRays()
     {
@@ -90,7 +103,6 @@ public class AttackOnGoing : IAttackStates {
             }
         }
         Debug.Log("I damn missed(AI)");
-        ToAttackDownTime();
         ResetState();
     }
     void SimulateAttackRaysWithSwingSpeed()
@@ -101,5 +113,7 @@ public class AttackOnGoing : IAttackStates {
     {
         hitObjects.Clear();//do at end
         cWP = 0;
+        hasAttacked = false;
+        currentAttackTime = 0;
     }
 }

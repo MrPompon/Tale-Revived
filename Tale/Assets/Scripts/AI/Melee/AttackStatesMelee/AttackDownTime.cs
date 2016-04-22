@@ -21,11 +21,11 @@ public class AttackDownTime : IAttackStates {
         attackState.currentAttackState = attackState.windUpAttackState;
         enemy.currentState = enemy.chaseState;
         downTime = 0;
+        enemy.m_animator.SetBool("IsReloading", false);
     }
     public void UpdateState()
     {
         ChannelDownTime();
-        enemy.m_animator.SetBool("IsAttacking", false);
     }
     public void ToAttackWindUp()
     {
