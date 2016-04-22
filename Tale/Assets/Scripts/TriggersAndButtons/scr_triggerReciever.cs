@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class scr_TriggerReciever : MonoBehaviour
+public class scr_triggerReciever : MonoBehaviour
 {
 
     // Use this for initialization

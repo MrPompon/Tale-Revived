@@ -174,7 +174,7 @@ MonoBehaviour:
     m_Bits: 4096
   vurnerableLayer:
     serializedVersion: 2
-    m_Bits: 65536
+    m_Bits: 81920
   livingLayer:
     serializedVersion: 2
     m_Bits: 8192
@@ -194,7 +194,7 @@ LineRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 0aa87e5e29aedb64cb3d459f68317736, type: 2}
+  - {fileID: 2100000, guid: 46d8da37268b14b43a0ebab4f933f772, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -218,10 +218,10 @@ LineRenderer:
     endWidth: 0.1
     m_StartColor:
       serializedVersion: 2
-      rgba: 4279966607
+      rgba: 4294967295
     m_EndColor:
       serializedVersion: 2
-      rgba: 4280361372
+      rgba: 4294967295
   m_UseWorldSpace: 1
 --- !u!1001 &100100000
 Prefab:
