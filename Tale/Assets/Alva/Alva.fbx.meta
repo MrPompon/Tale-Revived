@@ -197,6 +197,9 @@ ModelImporter:
     7400042: SprintTurnLeft
     7400044: Land
     7400046: Slide
+    7400048: Climb
+    7400050: SwingEnd
+    7400052: Land_Roll
     9500000: //RootNode
     13700000: Cloth
     13700002: Mesh
@@ -211,14 +214,11 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: "\nInbetween bone default rotation found in this file
-      is different from the one found in the source avatar:\n\t'AlvaSpine1' : rotation
-      error = 6.116284 deg\n\t'AlvaSpine4' : rotation error = 7.162942 deg\n\t'AlvaNeck2'
-      : rotation error = 2.680139 deg\n\nClip 'IdlRlx' has import animation warnings
-      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
-      to improve retargeting quality.\n\t'AlvaSpine1' is inbetween humanoid transforms
-      and has rotation animation that will be discarded.\n\t'AlvaSpine4' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n\t'AlvaNeck2'
+    animationImportWarnings: "\nClip 'IdlRlx' has import animation warnings that might
+      lower retargeting quality:\nNote: Activate translation DOF on avatar to improve
+      retargeting quality.\n\t'AlvaSpine1' is inbetween humanoid transforms and has
+      rotation animation that will be discarded.\n\t'AlvaSpine4' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\t'AlvaNeck2'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
       'IdlRlxBored' has import animation warnings that might lower retargeting quality:\nNote:
       Activate translation DOF on avatar to improve retargeting quality.\n\t'AlvaSpine1'
@@ -325,7 +325,22 @@ ModelImporter:
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'AlvaSpine4'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'AlvaNeck2'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Land_Roll' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'AlvaSpine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'AlvaSpine4'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'AlvaNeck2'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
       'Slide' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'AlvaSpine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'AlvaSpine4'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'AlvaNeck2'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Climb' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'AlvaSpine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'AlvaSpine4'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'AlvaNeck2'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'SwingEnd' has import animation warnings that might lower retargeting quality:\nNote:
       Activate translation DOF on avatar to improve retargeting quality.\n\t'AlvaSpine1'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'AlvaSpine4'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'AlvaNeck2'
@@ -592,18 +607,50 @@ ModelImporter:
       (21.4%) Frame 12\n\tRightHand average position error 12.3 mm and maximum position
       error 33.3 mm at time 0:12 (21.4%) Frame 12\n\tHead average position error 18.5
       mm and maximum position error 36.6 mm at time 0:12 (21.4%) Frame 12\n\nRetargeting
-      quality report for clip 'Slide':\n\tLeftLowerLeg average position error 0.6
-      mm and maximum position error 3.9 mm at time 0:12 (26.1%) Frame 12\n\tLeftUpperArm
-      average position error 43.5 mm and maximum position error 66.9 mm at time 0:22
-      (47.8%) Frame 22\n\tLeftLowerArm average position error 29.7 mm and maximum
-      position error 45.1 mm at time 0:21 (45.7%) Frame 21\n\tLeftHand average position
-      error 15.0 mm and maximum position error 35.2 mm at time 1: 3 (71.7%) Frame
-      33\n\tRightUpperArm average position error 42.6 mm and maximum position error
-      64.3 mm at time 0:22 (47.8%) Frame 22\n\tRightLowerArm average position error
-      23.9 mm and maximum position error 39.8 mm at time 0: 6 (13.0%) Frame 6\n\tRightHand
-      average position error 16.3 mm and maximum position error 30.2 mm at time 1:
-      2 (69.6%) Frame 32\n\tHead average position error 46.9 mm and maximum position
-      error 74.4 mm at time 0:21 (45.7%) Frame 21\n"
+      quality report for clip 'Land_Roll':\n\tLeftUpperArm average position error
+      39.6 mm and maximum position error 115.8 mm at time 0: 0 (0.0%) Frame 0\n\tLeftLowerArm
+      average position error 33.9 mm and maximum position error 67.0 mm at time 0:
+      0 (0.0%) Frame 0\n\tLeftHand average position error 33.0 mm and maximum position
+      error 52.4 mm at time 0: 2 (4.8%) Frame 2\n\tRightUpperArm average position
+      error 41.9 mm and maximum position error 116.9 mm at time 0: 0 (0.0%) Frame
+      0\n\tRightLowerArm average position error 27.2 mm and maximum position error
+      76.7 mm at time 0: 0 (0.0%) Frame 0\n\tRightHand average position error 18.5
+      mm and maximum position error 40.1 mm at time 0: 0 (0.0%) Frame 0\n\tHead average
+      position error 47.2 mm and maximum position error 132.6 mm at time 0: 0 (0.0%)
+      Frame 0\n\nRetargeting quality report for clip 'Slide':\n\tLeftLowerLeg average
+      position error 0.6 mm and maximum position error 3.9 mm at time 0:12 (26.1%)
+      Frame 12\n\tLeftUpperArm average position error 43.5 mm and maximum position
+      error 66.9 mm at time 0:22 (47.8%) Frame 22\n\tLeftLowerArm average position
+      error 29.7 mm and maximum position error 45.1 mm at time 0:21 (45.7%) Frame
+      21\n\tLeftHand average position error 15.0 mm and maximum position error 35.2
+      mm at time 1: 3 (71.7%) Frame 33\n\tRightUpperArm average position error 42.6
+      mm and maximum position error 64.3 mm at time 0:22 (47.8%) Frame 22\n\tRightLowerArm
+      average position error 23.9 mm and maximum position error 39.8 mm at time 0:
+      6 (13.0%) Frame 6\n\tRightHand average position error 16.3 mm and maximum position
+      error 30.2 mm at time 1: 2 (69.6%) Frame 32\n\tHead average position error 46.9
+      mm and maximum position error 74.4 mm at time 0:21 (45.7%) Frame 21\n\nRetargeting
+      quality report for clip 'Climb':\n\tLeftLowerLeg average position error 0.2
+      mm and maximum position error 1.9 mm at time 0: 7 (6.1%) Frame 7\n\tLeftUpperArm
+      average position error 20.0 mm and maximum position error 27.7 mm at time 2:27
+      (75.7%) Frame 87\n\tLeftLowerArm average position error 16.6 mm and maximum
+      position error 25.7 mm at time 2:18 (67.8%) Frame 78\n\tLeftHand average position
+      error 15.3 mm and maximum position error 25.8 mm at time 2:17 (67.0%) Frame
+      77\n\tRightUpperArm average position error 20.0 mm and maximum position error
+      28.1 mm at time 3: 2 (80.0%) Frame 92\n\tRightLowerArm average position error
+      17.4 mm and maximum position error 28.1 mm at time 3:14 (90.4%) Frame 104\n\tRightHand
+      average position error 15.9 mm and maximum position error 27.1 mm at time 3:11
+      (87.8%) Frame 101\n\tHead average position error 21.6 mm and maximum position
+      error 48.3 mm at time 1:29 (51.3%) Frame 59\n\nRetargeting quality report for
+      clip 'SwingEnd':\n\tLeftUpperArm average position error 37.3 mm and maximum
+      position error 67.3 mm at time 1: 1 (55.4%) Frame 31\n\tLeftLowerArm average
+      position error 29.4 mm and maximum position error 60.2 mm at time 0:24 (42.9%)
+      Frame 24\n\tLeftHand average position error 26.7 mm and maximum position error
+      62.1 mm at time 0:26 (46.4%) Frame 26\n\tRightUpperArm average position error
+      39.7 mm and maximum position error 70.6 mm at time 1: 1 (55.4%) Frame 31\n\tRightLowerArm
+      average position error 27.2 mm and maximum position error 48.4 mm at time 0:20
+      (35.7%) Frame 20\n\tRightHand average position error 23.0 mm and maximum position
+      error 46.1 mm at time 0:21 (37.5%) Frame 21\n\tHead average position error 41.2
+      mm and maximum position error 80.7 mm at time 1: 2 (57.1%) Frame 32\n"
     animationDoRetargetingWarnings: 1
     animationCompression: 3
     animationRotationError: 0.5
@@ -817,7 +864,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -1011,7 +1058,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -1787,7 +1834,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -1981,7 +2028,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -2175,7 +2222,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -2369,7 +2416,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -2951,7 +2998,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -3145,7 +3192,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -3339,7 +3386,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -3533,7 +3580,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -3727,7 +3774,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -4309,7 +4356,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -4503,7 +4550,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -4697,7 +4744,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -5094,6 +5141,588 @@ ModelImporter:
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Alva
+        weight: 0
+      - path: AlvaPelvis
+        weight: 1
+      - path: AlvaPelvis/AlvaBSkirt
+        weight: 0
+      - path: AlvaPelvis/AlvaFSkirt
+        weight: 0
+      - path: AlvaPelvis/AlvaLSkirt
+        weight: 0
+      - path: AlvaPelvis/AlvaLThigh
+        weight: 1
+      - path: AlvaPelvis/AlvaLThigh/AlvaLCalf
+        weight: 1
+      - path: AlvaPelvis/AlvaLThigh/AlvaLCalf/AlvaLFoot
+        weight: 1
+      - path: AlvaPelvis/AlvaLThigh/AlvaLCalf/AlvaLFoot/AlvaLToe
+        weight: 1
+      - path: AlvaPelvis/AlvaQuiver
+        weight: 0
+      - path: AlvaPelvis/AlvaRSkirt
+        weight: 0
+      - path: AlvaPelvis/AlvaRThigh
+        weight: 1
+      - path: AlvaPelvis/AlvaRThigh/AlvaRCalf
+        weight: 1
+      - path: AlvaPelvis/AlvaRThigh/AlvaRCalf/AlvaRFoot
+        weight: 1
+      - path: AlvaPelvis/AlvaRThigh/AlvaRCalf/AlvaRFoot/AlvaRToe
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaItemBack
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLIndexFinger1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLIndexFinger1/AlvaLIndexFinger2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLIndexFinger1/AlvaLIndexFinger2/AlvaLIndexFinger3
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLItem
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLLongfinger1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLLongfinger1/AlvaLLongfinger2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLLongfinger1/AlvaLLongfinger2/AlvaLLongfinger3
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLPinky1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLPinky1/AlvaLPinky2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLPinky1/AlvaLPinky2/AlvaLPinky3
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLRingFinger1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLRingFinger1/AlvaLRingFinger2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLRingFinger1/AlvaLRingFinger2/AlvaLRingFinger3
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLThumb1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLThumb1/AlvaLThumb2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLThumb1/AlvaLThumb2/AlvaLThumb3
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaHood
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaLBang1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaLBang1/AlvaLBang2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaLBang1/AlvaLBang2/AlvaLBang3
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaLBang1/AlvaLBang2/AlvaLBang3/AlvaLBang4
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaLBang1/AlvaLBang2/AlvaLBang3/AlvaLBangBack1
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaLBang1/AlvaLBang2/AlvaLBang3/AlvaLBangBack1/AlvaLBangBack2
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaPonytail1
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaPonytail1/AlvaPonytail2
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaPonytail1/AlvaPonytail2/AlvaPonytail3
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaPonytail1/AlvaPonytail2/AlvaPonytail3/AlvaPonytail4
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaRBang1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaRBang1/AlvaRBang2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaRBang1/AlvaRBang2/AlvaRBang3
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaRBang1/AlvaRBang2/AlvaRBang3/AlvaRBang4
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaRBang1/AlvaRBang2/AlvaRBang3/AlvaRBang4/AlvaRBang5
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRIndexFinger1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRIndexFinger1/AlvaRIndexFinger2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRIndexFinger1/AlvaRIndexFinger2/AlvaRIndexFinger3
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRItem
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRLongfinger1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRLongfinger1/AlvaRLongfinger2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRLongfinger1/AlvaRLongfinger2/AlvaRLongfinger3
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRPinky1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRPinky1/AlvaRPinky2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRPinky1/AlvaRPinky2/AlvaRPinky3
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRRingFinger1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRRingFinger1/AlvaRRingFinger2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRRingFinger1/AlvaRRingFinger2/AlvaRRingFinger3
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRThumb1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRThumb1/AlvaRThumb2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRThumb1/AlvaRThumb2/AlvaRThumb3
+        weight: 1
+      - path: Cloth
+        weight: 0
+      - path: Mesh
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Climb
+      takeName: Climb
+      firstFrame: 0
+      lastFrame: 115
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Alva
+        weight: 0
+      - path: AlvaPelvis
+        weight: 1
+      - path: AlvaPelvis/AlvaBSkirt
+        weight: 0
+      - path: AlvaPelvis/AlvaFSkirt
+        weight: 0
+      - path: AlvaPelvis/AlvaLSkirt
+        weight: 0
+      - path: AlvaPelvis/AlvaLThigh
+        weight: 1
+      - path: AlvaPelvis/AlvaLThigh/AlvaLCalf
+        weight: 1
+      - path: AlvaPelvis/AlvaLThigh/AlvaLCalf/AlvaLFoot
+        weight: 1
+      - path: AlvaPelvis/AlvaLThigh/AlvaLCalf/AlvaLFoot/AlvaLToe
+        weight: 1
+      - path: AlvaPelvis/AlvaQuiver
+        weight: 0
+      - path: AlvaPelvis/AlvaRSkirt
+        weight: 0
+      - path: AlvaPelvis/AlvaRThigh
+        weight: 1
+      - path: AlvaPelvis/AlvaRThigh/AlvaRCalf
+        weight: 1
+      - path: AlvaPelvis/AlvaRThigh/AlvaRCalf/AlvaRFoot
+        weight: 1
+      - path: AlvaPelvis/AlvaRThigh/AlvaRCalf/AlvaRFoot/AlvaRToe
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaItemBack
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLIndexFinger1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLIndexFinger1/AlvaLIndexFinger2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLIndexFinger1/AlvaLIndexFinger2/AlvaLIndexFinger3
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLItem
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLLongfinger1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLLongfinger1/AlvaLLongfinger2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLLongfinger1/AlvaLLongfinger2/AlvaLLongfinger3
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLPinky1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLPinky1/AlvaLPinky2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLPinky1/AlvaLPinky2/AlvaLPinky3
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLRingFinger1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLRingFinger1/AlvaLRingFinger2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLRingFinger1/AlvaLRingFinger2/AlvaLRingFinger3
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLThumb1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLThumb1/AlvaLThumb2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLThumb1/AlvaLThumb2/AlvaLThumb3
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaHood
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaLBang1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaLBang1/AlvaLBang2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaLBang1/AlvaLBang2/AlvaLBang3
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaLBang1/AlvaLBang2/AlvaLBang3/AlvaLBang4
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaLBang1/AlvaLBang2/AlvaLBang3/AlvaLBangBack1
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaLBang1/AlvaLBang2/AlvaLBang3/AlvaLBangBack1/AlvaLBangBack2
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaPonytail1
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaPonytail1/AlvaPonytail2
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaPonytail1/AlvaPonytail2/AlvaPonytail3
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaPonytail1/AlvaPonytail2/AlvaPonytail3/AlvaPonytail4
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaRBang1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaRBang1/AlvaRBang2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaRBang1/AlvaRBang2/AlvaRBang3
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaRBang1/AlvaRBang2/AlvaRBang3/AlvaRBang4
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaRBang1/AlvaRBang2/AlvaRBang3/AlvaRBang4/AlvaRBang5
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRIndexFinger1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRIndexFinger1/AlvaRIndexFinger2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRIndexFinger1/AlvaRIndexFinger2/AlvaRIndexFinger3
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRItem
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRLongfinger1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRLongfinger1/AlvaRLongfinger2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRLongfinger1/AlvaRLongfinger2/AlvaRLongfinger3
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRPinky1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRPinky1/AlvaRPinky2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRPinky1/AlvaRPinky2/AlvaRPinky3
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRRingFinger1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRRingFinger1/AlvaRRingFinger2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRRingFinger1/AlvaRRingFinger2/AlvaRRingFinger3
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRThumb1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRThumb1/AlvaRThumb2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRThumb1/AlvaRThumb2/AlvaRThumb3
+        weight: 1
+      - path: Cloth
+        weight: 0
+      - path: Mesh
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: SwingEnd
+      takeName: SwingEnd
+      firstFrame: 0
+      lastFrame: 56
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Alva
+        weight: 0
+      - path: AlvaPelvis
+        weight: 1
+      - path: AlvaPelvis/AlvaBSkirt
+        weight: 0
+      - path: AlvaPelvis/AlvaFSkirt
+        weight: 0
+      - path: AlvaPelvis/AlvaLSkirt
+        weight: 0
+      - path: AlvaPelvis/AlvaLThigh
+        weight: 1
+      - path: AlvaPelvis/AlvaLThigh/AlvaLCalf
+        weight: 1
+      - path: AlvaPelvis/AlvaLThigh/AlvaLCalf/AlvaLFoot
+        weight: 1
+      - path: AlvaPelvis/AlvaLThigh/AlvaLCalf/AlvaLFoot/AlvaLToe
+        weight: 1
+      - path: AlvaPelvis/AlvaQuiver
+        weight: 0
+      - path: AlvaPelvis/AlvaRSkirt
+        weight: 0
+      - path: AlvaPelvis/AlvaRThigh
+        weight: 1
+      - path: AlvaPelvis/AlvaRThigh/AlvaRCalf
+        weight: 1
+      - path: AlvaPelvis/AlvaRThigh/AlvaRCalf/AlvaRFoot
+        weight: 1
+      - path: AlvaPelvis/AlvaRThigh/AlvaRCalf/AlvaRFoot/AlvaRToe
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaItemBack
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLIndexFinger1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLIndexFinger1/AlvaLIndexFinger2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLIndexFinger1/AlvaLIndexFinger2/AlvaLIndexFinger3
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLItem
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLLongfinger1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLLongfinger1/AlvaLLongfinger2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLLongfinger1/AlvaLLongfinger2/AlvaLLongfinger3
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLPinky1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLPinky1/AlvaLPinky2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLPinky1/AlvaLPinky2/AlvaLPinky3
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLRingFinger1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLRingFinger1/AlvaLRingFinger2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLRingFinger1/AlvaLRingFinger2/AlvaLRingFinger3
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLThumb1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLThumb1/AlvaLThumb2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaLCollarbone/AlvaLUpperarm/AlvaLForearm/AlvaLPalm/AlvaLThumb1/AlvaLThumb2/AlvaLThumb3
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaHood
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaLBang1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaLBang1/AlvaLBang2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaLBang1/AlvaLBang2/AlvaLBang3
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaLBang1/AlvaLBang2/AlvaLBang3/AlvaLBang4
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaLBang1/AlvaLBang2/AlvaLBang3/AlvaLBangBack1
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaLBang1/AlvaLBang2/AlvaLBang3/AlvaLBangBack1/AlvaLBangBack2
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaPonytail1
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaPonytail1/AlvaPonytail2
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaPonytail1/AlvaPonytail2/AlvaPonytail3
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaPonytail1/AlvaPonytail2/AlvaPonytail3/AlvaPonytail4
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaRBang1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaRBang1/AlvaRBang2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaRBang1/AlvaRBang2/AlvaRBang3
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaRBang1/AlvaRBang2/AlvaRBang3/AlvaRBang4
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaNeck1/AlvaNeck2/AlvaHead/AlvaRBang1/AlvaRBang2/AlvaRBang3/AlvaRBang4/AlvaRBang5
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRIndexFinger1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRIndexFinger1/AlvaRIndexFinger2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRIndexFinger1/AlvaRIndexFinger2/AlvaRIndexFinger3
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRItem
+        weight: 0
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRLongfinger1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRLongfinger1/AlvaRLongfinger2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRLongfinger1/AlvaRLongfinger2/AlvaRLongfinger3
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRPinky1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRPinky1/AlvaRPinky2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRPinky1/AlvaRPinky2/AlvaRPinky3
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRRingFinger1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRRingFinger1/AlvaRRingFinger2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRRingFinger1/AlvaRRingFinger2/AlvaRRingFinger3
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRThumb1
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRThumb1/AlvaRThumb2
+        weight: 1
+      - path: AlvaPelvis/AlvaSpine1/AlvaSpine2/AlvaSpine3/AlvaSpine4/AlvaRibcage/AlvaRCollarbone/AlvaRUpperarm/AlvaRForearm/AlvaRPalm/AlvaRThumb1/AlvaRThumb2/AlvaRThumb3
+        weight: 1
+      - path: Cloth
+        weight: 0
+      - path: Mesh
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Land_Roll
+      takeName: Land_Roll
+      firstFrame: 0
+      lastFrame: 35
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
