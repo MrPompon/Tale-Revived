@@ -1,0 +1,192 @@
+fileFormatVersion: 2
+guid: 66a983b5a128cdd43a6143e21e3959ac
+timeCreated: 1461316563
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Knight
+    100002: //RootNode
+    100004: Trooper
+    100006: TrooperElbowSocket
+    100008: TrooperElbowSocket1
+    100010: TrooperFootBone001
+    100012: TrooperFootBone0011
+    100014: TrooperHead
+    100016: TrooperLCalf
+    100018: TrooperLCollarbone
+    100020: TrooperLFingers1
+    100022: TrooperLFingers2
+    100024: TrooperLFingers3
+    100026: TrooperLFoot
+    100028: TrooperLForearm
+    100030: TrooperLPalm
+    100032: TrooperLPalmSocket
+    100034: TrooperLPlatform
+    100036: TrooperLThigh
+    100038: TrooperLThumb1
+    100040: TrooperLThumb2
+    100042: TrooperLThumb3
+    100044: TrooperLUpperarm
+    100046: TrooperNeck1
+    100048: TrooperNeck2
+    100050: TrooperPelvis
+    100052: TrooperPelvisSkirtPoint
+    100054: TrooperRCalf
+    100056: TrooperRCollarbone
+    100058: TrooperRFingers1
+    100060: TrooperRFingers2
+    100062: TrooperRFingers3
+    100064: TrooperRFoot
+    100066: TrooperRForearm
+    100068: TrooperRibcage
+    100070: TrooperRibcageBone001
+    100072: TrooperRPalm
+    100074: TrooperRPalmSocket
+    100076: TrooperRPlatform
+    100078: TrooperRThigh
+    100080: TrooperRThumb1
+    100082: TrooperRThumb2
+    100084: TrooperRThumb3
+    100086: TrooperRUpperarm
+    100088: TrooperSpine1
+    100090: TrooperSpine2
+    100092: TrooperSpine3
+    100094: TrooperSpine4
+    400000: Knight
+    400002: //RootNode
+    400004: Trooper
+    400006: TrooperElbowSocket
+    400008: TrooperElbowSocket1
+    400010: TrooperFootBone001
+    400012: TrooperFootBone0011
+    400014: TrooperHead
+    400016: TrooperLCalf
+    400018: TrooperLCollarbone
+    400020: TrooperLFingers1
+    400022: TrooperLFingers2
+    400024: TrooperLFingers3
+    400026: TrooperLFoot
+    400028: TrooperLForearm
+    400030: TrooperLPalm
+    400032: TrooperLPalmSocket
+    400034: TrooperLPlatform
+    400036: TrooperLThigh
+    400038: TrooperLThumb1
+    400040: TrooperLThumb2
+    400042: TrooperLThumb3
+    400044: TrooperLUpperarm
+    400046: TrooperNeck1
+    400048: TrooperNeck2
+    400050: TrooperPelvis
+    400052: TrooperPelvisSkirtPoint
+    400054: TrooperRCalf
+    400056: TrooperRCollarbone
+    400058: TrooperRFingers1
+    400060: TrooperRFingers2
+    400062: TrooperRFingers3
+    400064: TrooperRFoot
+    400066: TrooperRForearm
+    400068: TrooperRibcage
+    400070: TrooperRibcageBone001
+    400072: TrooperRPalm
+    400074: TrooperRPalmSocket
+    400076: TrooperRPlatform
+    400078: TrooperRThigh
+    400080: TrooperRThumb1
+    400082: TrooperRThumb2
+    400084: TrooperRThumb3
+    400086: TrooperRUpperarm
+    400088: TrooperSpine1
+    400090: TrooperSpine2
+    400092: TrooperSpine3
+    400094: TrooperSpine4
+    4300000: Knight
+    7400000: T-Pose
+    7400002: Idl_Rlx
+    7400004: Idl_Rlx_Bored
+    7400006: Idl_Rlx_Bored2
+    7400008: Walk
+    7400010: Run
+    7400012: Looking
+    7400014: Looking_2
+    7400016: Fleeing
+    7400018: Falling
+    7400020: Land
+    7400022: Getup
+    7400024: Taunt
+    7400026: Ranged_Aim
+    7400028: Ranged_Shoot
+    7400030: Ranged_Reload
+    7400032: Ranged_Walk
+    7400034: Melee_Thrust
+    7400036: Melee_Block
+    7400038: Wave
+    7400040: Death
+    7400042: Death2
+    9500000: //RootNode
+    13700000: Knight
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
