@@ -18,7 +18,7 @@ public class AlertState : IEnemyState
     {
         BetterRay();
         Search();
-        enemy.m_animator.SetBool("IsSearching", true);
+        //enemy.m_animator.SetBool("IsSearching", true);
     }
     public void OnTriggerEnter(Collider colli)
     {
@@ -65,7 +65,7 @@ public class AlertState : IEnemyState
             RaycastHit hit;
 
             // ... and if a raycast towards the player hits something...
-            if (Physics.Raycast(enemy.eyes.transform.position + enemy.eyes.transform.up, direction.normalized, out hit, enemy.m_sphereCol.radius * 2))
+            if (Physics.Raycast(enemy.eyes.transform.position + enemy.eyes.transform.up, direction.normalized, out hit, enemy.m_sphereCol.radius * 2, enemy.playerLayer))
             {
                 // ... and if the raycast hits the player...
                 if (hit.collider.gameObject.CompareTag("Player"))
@@ -81,8 +81,7 @@ public class AlertState : IEnemyState
     }
     private void Search()
     {
-        enemy.meshRendererFlag.material.color = Color.yellow;
-        enemy.navMeshAgent.Stop();
+        //enemy.navMeshAgent.Stop();
         //enemy.transform.Rotate(0, enemy.searchTurnSpeed * Time.deltaTime,0); //rotates on this points and it stopped above.
         searchTimer += Time.deltaTime;
         if (searchTimer >= enemy.searchDuration)

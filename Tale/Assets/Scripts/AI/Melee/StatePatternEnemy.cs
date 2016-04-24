@@ -12,7 +12,6 @@ public class StatePatternEnemy : MonoBehaviour {
     public float sightRange;
     public Vector3 offset = new Vector3(0, 0.5f, 0); //lookoffset
     Vector3 prevFramePos;
-    public MeshRenderer meshRendererFlag;
 
     public float attackRange = 4.0f;
     public float attackWindUpDuration = 0.4f;
@@ -26,7 +25,10 @@ public class StatePatternEnemy : MonoBehaviour {
     public float FOV_angle;
     public SphereCollider m_sphereCol;
     public bool drawGizmos;
+
     [HideInInspector]public Animator m_animator;
+    public float animClipTimeLeft; 
+
     Vector2 smoothDeltaPosition = Vector2.zero;
     Vector2 velocity = Vector2.zero;
     [HideInInspector]public Transform chaseTarget;
@@ -119,6 +121,14 @@ public class StatePatternEnemy : MonoBehaviour {
         m_animator.SetFloat("Turn", navMeshAgent.velocity.x);
         //print(velocity);
         prevFramePos = this.transform.position;
+        UpdateClipLength();
+    }
+    IEnumerator UpdateClipLength()
+    {
+        yield return new WaitForEndOfFrame();
+        print("current clip length = " + m_animator.GetCurrentAnimatorStateInfo(0).length);
+        animClipTimeLeft = m_animator.GetCurrentAnimatorStateInfo(0).length;
+
     }
     private void OnTriggerEnter(Collider other)
     {

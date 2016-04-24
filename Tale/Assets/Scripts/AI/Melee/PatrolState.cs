@@ -32,6 +32,7 @@ public class PatrolState : IEnemyState{
     public void ToAlertState()
     {
         enemy.currentState = enemy.alertState;
+        enemy.m_animator.SetBool("IsSearching", true);
     }
     public void ToPatrolState()
     {
@@ -44,6 +45,7 @@ public class PatrolState : IEnemyState{
     public void ToAttackState()
     {
         enemy.currentState = enemy.attackState;
+       
     }
     public void ToRetreatState()
     {
@@ -60,7 +62,7 @@ public class PatrolState : IEnemyState{
             RaycastHit hit;
 
             // ... and if a raycast towards the player hits something...
-            if (Physics.Raycast(enemy.eyes.transform.position + enemy.eyes.transform.up, direction.normalized, out hit, enemy.m_sphereCol.radius))
+            if (Physics.Raycast(enemy.eyes.transform.position + enemy.eyes.transform.up, direction.normalized, out hit, enemy.m_sphereCol.radius,enemy.playerLayer))
             {
                 // ... and if the raycast hits the player...
                 if (hit.collider.gameObject.CompareTag("Player"))
@@ -76,7 +78,6 @@ public class PatrolState : IEnemyState{
     }
     private void Patrol()
     {
-        enemy.meshRendererFlag.material.color = Color.green;
         enemy.navMeshAgent.destination = enemy.waypoints[nextWayPoint].position;
         enemy.navMeshAgent.Resume();
 
