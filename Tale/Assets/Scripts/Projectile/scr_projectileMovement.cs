@@ -169,13 +169,16 @@ public class scr_projectileMovement : MonoBehaviour
             SetShouldBeDestroyed();
             if (playerAttach.GetTetherObject().GetInstanceID() != null)
             {
-            if (playerAttach.GetTetherObject().GetInstanceID() == this.transform.GetInstanceID())
-            {
-                //PSF.SetRunning();
-                PSF.SetRunning();
-                PSF.DeattachTether();
-                print("DEAATTACHING ROPE, SINCE THE ARROW THAT IM STUCK ON IS NOW GAWN");
-            }
+                if (playerAttach.GetTetherObject() != null)
+                {
+                    if (playerAttach.GetTetherObject().GetInstanceID() == this.transform.GetInstanceID())
+                    {
+                        //PSF.SetRunning();
+                        PSF.SetRunning();
+                        PSF.DeattachTether();
+                        print("DEAATTACHING ROPE, SINCE THE ARROW THAT IM STUCK ON IS NOW GAWN");
+                    }
+                }
             }
         }
     }

@@ -44,6 +44,7 @@ public class scr_attachRopeTo : MonoBehaviour
     private bool isGrounded;
     private Transform ropeRenderpoint1, ropeRenderpoint2;
     private Transform attachedArrowsHitTransform;
+    
     void Start()
     {
         m_collider = GetComponent<Collider>();
@@ -69,10 +70,16 @@ public class scr_attachRopeTo : MonoBehaviour
             {
                 if (tetherObject != null && !Input.GetButton("ReelInRope"))
                 {
-
-                    tetherLength = Vector3.Distance(this.transform.position, tetherObject.transform.position);
-                    // do slidy slide or pull object
-                    //when grounded works add restriction when falling with rope
+                    if (tetherLength < maxTetherLength)
+                    {
+                        tetherLength = Vector3.Distance(this.transform.position, tetherObject.transform.position);
+                        // do slidy slide or pull object
+                        //when grounded works add restriction when falling with rope
+                    }
+                    else
+                    {
+                        TetherRestriction();
+                    }
                 }
                 if (Input.GetButton("ReelInRope"))
                 {
@@ -125,6 +132,11 @@ public class scr_attachRopeTo : MonoBehaviour
                 PSF.DeattachJump();
             }
         }
+        if (Input.GetButtonDown("Deattach"))
+        {
+            PSF.DeattachTether();
+            PSF.SetRunning();
+        }
     }
     public void SetRoperenderingpoints(Transform from, Transform to)
     {
@@ -157,14 +169,14 @@ public class scr_attachRopeTo : MonoBehaviour
 
             }
         }
-            NewVelocity();
-            if (!isGrounded && amITethered)
-            {
+        NewVelocity();
+        if (!isGrounded && amITethered)
+        {
                 this.transform.Translate(prevVelocity * speedMultiplier * Time.deltaTime, Space.World);
                 m_rgd.velocity = prevVelocity * speedMultiplier * Time.deltaTime;
 
                 TetherRestriction();
-            }
+        }
             
             PrevVelocity();  //always update velocity thingies 
             PrevPosition();
@@ -265,11 +277,7 @@ public class scr_attachRopeTo : MonoBehaviour
     }
     void HandleMoveInput(float vInput, float hInput)
     {
-        this.transform.Translate(new Vector3(hInput * swingSpeed,0 , vInput * swingSpeed) * Time.deltaTime);
-        if (amITethered)
-        {//fake gravity 
-           // this.transform.Translate(new Vector3(0, downwardAcc, 0) * Time.deltaTime, Space.World);
-        }
+        this.transform.Translate(new Vector3(hInput * swingSpeed, downwardAcc , vInput * swingSpeed) * Time.deltaTime);
     }
     public void JumpAtDetach()
     {
