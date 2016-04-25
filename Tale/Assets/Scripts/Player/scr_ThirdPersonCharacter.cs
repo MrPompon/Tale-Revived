@@ -34,12 +34,13 @@ public class scr_ThirdPersonCharacter : MonoBehaviour
     private GameObject m_Player;
     public float m_InAirMaxSpeed;
     scr_AudioManager m_AudioManager;
+    scr_ThirdPersonUserControl m_TPUC;
     public float m_slidingSpeedMultiplier;
     private float m_defaultSlidingSpeedMultiplier;
     private float m_defaultMovingTurnSpeed;
     private bool m_playJumpLandingSound = false;
-
     private bool isClimbing;
+    private float m_Left;
 
 	void Start()
 	{
@@ -55,6 +56,7 @@ public class scr_ThirdPersonCharacter : MonoBehaviour
         m_AudioManager = Camera.main.GetComponent<scr_AudioManager>();
         m_defaultSlidingSpeedMultiplier = m_MoveSpeedMultiplier;
         m_defaultMovingTurnSpeed = m_MovingTurnSpeed;
+        m_TPUC = gameObject.GetComponent<scr_ThirdPersonUserControl>();
 	}
 
 
@@ -71,10 +73,11 @@ public class scr_ThirdPersonCharacter : MonoBehaviour
 		move = Vector3.ProjectOnPlane(move, m_GroundNormal);
 		m_TurnAmount = Mathf.Atan2(move.x, move.z);
 		m_ForwardAmount = move.z;
-
+        m_Left = move.x;
         this.isAiming = aim;
         this.isSliding = sliding;
         this.currentLookPosition = lookPos;
+        this.isClimbing = climbing;
         if(!isAiming && m_PSM.GetPlayerState(true) == scr_PSM.Playerstate.state_grounded )
         {
             ApplyExtraTurnRotation();
@@ -85,27 +88,33 @@ public class scr_ThirdPersonCharacter : MonoBehaviour
             //
             m_Player.transform.forward = new Vector3(Camera.main.transform.forward.x, m_Player.transform.forward.y, Camera.main.transform.forward.z);
         }
-
             Sliding();
-
 		// control and velocity handling is different when grounded and airborne:
-		if (m_IsGrounded)
+		if (m_IsGrounded) 
 		{
 			HandleGroundedMovement(crouch, jump);
             m_PSM.SetPlayerState(scr_PSM.Playerstate.state_grounded);
             m_PSM.SetPlayerPose(scr_PSM.PlayerPose.pose_running);
 		}
-		else
+		else if(m_PSM.GetPlayerPose(true) != scr_PSM.PlayerPose.pose_wallclimbing)
 		{
 			HandleAirborneMovement();
            m_PSM.SetPlayerState(scr_PSM.Playerstate.state_airborne);
 		}
 		ScaleCapsuleForCrouching(crouch);
 		PreventStandingInLowHeadroom();
-
+        JumpHandler();
 		// send input and other state parameters to the animator
 		UpdateAnimator(move);
 	}
+    void JumpHandler()
+    {
+        if (Input.GetButton("Jump") && m_IsGrounded == true)
+        {
+            m_Rigidbody.AddForce(new Vector3(0, m_JumpPower, 0), ForceMode.Impulse);
+            m_Rigidbody.useGravity = true;
+        }
+    }
 	void ScaleCapsuleForCrouching(bool crouch)
 	{
 		if (m_IsGrounded && crouch)
@@ -181,13 +190,25 @@ public class scr_ThirdPersonCharacter : MonoBehaviour
 		// update the animator parameters
 		m_Animator.SetFloat("Forward", m_ForwardAmount, 0.1f, Time.deltaTime);
 		m_Animator.SetFloat("Turn", m_TurnAmount, 0.1f, Time.deltaTime);
-		m_Animator.SetBool("Crouch", m_Crouching);
+		//m_Animator.SetBool("Crouch", m_Crouching);
 		m_Animator.SetBool("OnGround", m_IsGrounded);
+        m_Animator.SetBool("Climb", isClimbing);
+        m_Animator.SetBool("Aim", isAiming);
+
+        m_Animator.SetFloat("Left", -m_Left);
+
 		if (!m_IsGrounded)
 		{
 			m_Animator.SetFloat("Jump", m_Rigidbody.velocity.y);
 		}
-
+        if(m_TPUC.GetCanShoot() == true && Input.GetAxisRaw("FireAxis") != 0)
+        {
+            m_Animator.SetBool("Shoot", true);
+        }
+        else
+        {
+            m_Animator.SetBool("Shoot", false);
+        }
 		// calculate which leg is behind, so as to leave that leg trailing in the jump animation
 		// (This code is reliant on the specific run cycle offset in our animations,
 		// and assumes one leg passes the other at the normalized clip times of 0.0 and 0.5)
@@ -198,7 +219,7 @@ public class scr_ThirdPersonCharacter : MonoBehaviour
 		float jumpLeg = (runCycle < k_Half ? 1 : -1) * m_ForwardAmount;
 		if (m_IsGrounded)
 		{
-			m_Animator.SetFloat("JumpLeg", jumpLeg);
+		//	m_Animator.SetFloat("JumpLeg", jumpLeg);
 		}
 
 		// the anim speed multiplier allows the overall speed of walking/running to be tweaked in the inspector,
@@ -227,7 +248,7 @@ public class scr_ThirdPersonCharacter : MonoBehaviour
 		// apply extra gravity from multiplier:
         // dont allow the player to rotate with vertical - while in air.
 		Vector3 extraGravityForce = (Physics.gravity * m_GravityMultiplier) - Physics.gravity;
-
+        
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
 
@@ -268,19 +289,19 @@ public class scr_ThirdPersonCharacter : MonoBehaviour
 	}
 
 
-	public void OnAnimatorMove()
-	{
-		// we implement this function to override the default root motion.
-		// this allows us to modify the positional speed before it's applied.
-		if (m_IsGrounded && Time.deltaTime > 0)
-		{
-			Vector3 v = (m_Animator.deltaPosition * m_MoveSpeedMultiplier) / Time.deltaTime;
+    public void OnAnimatorMove()
+    {
+        // we implement this function to override the default root motion.
+        // this allows us to modify the positional speed before it's applied.
+        if (m_IsGrounded && Time.deltaTime > 0)
+        {
+            Vector3 v = (m_Animator.deltaPosition * m_MoveSpeedMultiplier) / Time.deltaTime;
 
-			// we preserve the existing y part of the current velocity.
-			v.y = m_Rigidbody.velocity.y;
-			m_Rigidbody.velocity = v;
-		}
-	}
+            // we preserve the existing y part of the current velocity.
+            v.y = m_Rigidbody.velocity.y;
+            m_Rigidbody.velocity = v;
+        }
+    }
 
 
 	void CheckGroundStatus()
@@ -310,12 +331,12 @@ public class scr_ThirdPersonCharacter : MonoBehaviour
             m_playJumpLandingSound = true;
 			m_IsGrounded = false;
 			m_GroundNormal = Vector3.up;
-			m_Animator.applyRootMotion = false;
-            if(isAiming )
-            {
-                m_Rigidbody.velocity = Vector3.zero;
-                m_ForwardAmount = 0;
-            }
+			//m_Animator.applyRootMotion = false;
+            //if(isAiming )
+            //{
+            //    m_Rigidbody.velocity = Vector3.zero;
+            //    m_ForwardAmount = 0;
+            //}
 		}
 	}
 }

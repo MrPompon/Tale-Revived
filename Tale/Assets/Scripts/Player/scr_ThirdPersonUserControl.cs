@@ -67,6 +67,7 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
     bool ropeAttachedToArrow;
     private scr_PSM m_psm;
 
+    public float m_WallClimbingSpeed;
     private void Start()
     {
         // get the transform of the main camera
@@ -89,6 +90,14 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
         m_rgd = gameObject.GetComponent<Rigidbody>();
         m_audioManager = Camera.main.GetComponent<scr_AudioManager>();
         m_psm = m_player.GetComponent<scr_PSM>();
+
+    }
+    public bool GetCanShoot()
+    {
+        if (m_reloadCounter > m_ReloadTime)
+            return true;
+        else
+            return false;
     }
     void CheckClimbViability()
     {
@@ -96,11 +105,11 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
         //raycast top of climable object?? If lvl designer doesnt use it well.
 
         RaycastHit hit;
-        Ray ray = new Ray(new Vector3(transform.position.x, transform.position.y - 0.7f, transform.position.z), transform.forward);
-        Debug.DrawRay(new Vector3(transform.position.x , transform.position.y - 0.7f, transform.position.z), transform.forward);
+        Ray ray = new Ray(new Vector3(transform.position.x, transform.position.y , transform.position.z), transform.forward);
+        Debug.DrawRay(new Vector3(transform.position.x , transform.position.y , transform.position.z), transform.forward);
         Debug.DrawRay(transform.position, transform.up,Color.red);
 
-
+       
 
         if(Physics.Raycast(ray, out hit) && m_psm.GetPlayerState(true) == scr_PSM.Playerstate.state_airborne && m_rgd.velocity.y < 0 )
         {
@@ -110,37 +119,69 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
                 {
                     if(hit.collider.gameObject.transform.position.y + hit.collider.bounds.extents.y - transform.position.y < m_ClimbingLenght)
                     {
-                        ClimbObject(hit.collider.gameObject);
+                        ClimbObject(hit.collider.gameObject,hit);
                     }
-
                 }
             }
         }
     }
-    void ClimbObject(GameObject obj)
+    void ClimbObject(GameObject obj, RaycastHit hit)
     {
-        m_psm.SetPlayerPose(scr_PSM.PlayerPose.pose_climbing);
+        m_psm.SetPlayerPose(scr_PSM.PlayerPose.pose_wallclimbing);
         transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x,
-                    obj.transform.position.y + obj.GetComponent<Collider>().bounds.extents.y, transform.position.z), m_ClimbingSpeed);
+                    obj.transform.position.y + obj.GetComponent<Collider>().bounds.extents.y - 0.5f, transform.position.z), m_ClimbingSpeed);
         m_rgd.velocity = new Vector3(0, 0, 0);
+      //  transform.rotation = new Quaternion(hit.normal.x, hit.normal.y,hit.normal.z, transform.rotation.w);
 
     }
     void ClimbingJump()
     {
-        if(m_psm.GetPlayerPose(true) == scr_PSM.PlayerPose.pose_climbing && CrossPlatformInputManager.GetButtonDown("Jump"))
+        if(m_psm.GetPlayerPose(true) == scr_PSM.PlayerPose.pose_wallclimbing && CrossPlatformInputManager.GetButtonDown("Jump"))
         {
            var localVel = transform.InverseTransformDirection(m_rgd.velocity);
            localVel.z = 1;
-           localVel.y = 5;
+           localVel.y = 7;
 
            m_rgd.velocity = transform.TransformDirection(localVel);
-            
+           m_psm.SetPlayerPose(scr_PSM.PlayerPose.pose_running);
         }
+    }
+    void WallClimbing()
+    {
+        if(m_psm.GetPlayerPose(true) == scr_PSM.PlayerPose.pose_wallclimbing )
+        {
+            
+            float h = CrossPlatformInputManager.GetAxis("Horizontal");
+            float v = CrossPlatformInputManager.GetAxis("Vertical");
+
+            var localVel = transform.InverseTransformDirection(m_rgd.velocity);
+           // localVel.z = m_WallClimbingSpeed * v;
+            localVel.x = m_WallClimbingSpeed * h;
+
+            m_rgd.velocity = transform.TransformDirection(localVel);
+
+        }
+    }
+    bool GetClimbingStatus()
+    {
+        if(m_psm.GetPlayerPose(true) == scr_PSM.PlayerPose.pose_wallclimbing)
+        {
+            m_Climbing = true;
+            m_rgd.useGravity = false;
+        }
+        else
+        {
+            m_rgd.useGravity = true;
+            m_Climbing = false;
+        }
+        return m_Climbing;
     }
     private void Update()
     {
         CheckClimbViability();
         ClimbingJump();
+        WallClimbing();
+
 
         if (Input.GetButtonDown("ChangeEquippedArrow"))
         {
@@ -161,7 +202,7 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
         }
         if(Input.GetKey(KeyCode.T))
         {
-            m_sliding = true;
+            m_psm.SetPlayerPose(scr_PSM.PlayerPose.pose_wallclimbing);
         }
         else
         {
@@ -175,15 +216,10 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
         if (aim)
         {
             if(Input.GetMouseButtonDown(1))
-            {
                 m_audioManager.PlayDrawBow();
-            }
-
             if (Input.GetMouseButton(0) && m_reloadCounter > m_ReloadTime)
-
             print("AIM");
             if (Input.GetAxisRaw("FireAxis")>0) //load the bow
-
             {
                 arrowIsLoaded = true;
                 if (currentArrowForce < maxBowLoadupDuration)
@@ -197,40 +233,6 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
             }
             if (arrowIsLoaded)
             {
-
-             //   anim.SetTrigger("Fire");
-                //GameObject arrow = (GameObject)Instantiate(m_arrowPrefab, m_arrowSpawnpoint.position, m_player.GetComponent<Transform>().rotation);
-                //scr_projectileMovement projMovement = arrow.GetComponent<scr_projectileMovement>();
-                //projMovement.OnProjectileSpawn();
-                //projMovement.SetProjectileOriginator(this.gameObject);
-                //Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0.0f));
-                ////projMovement.AddVelocity(ray.direction, m_projectileSpeed + m_rgd.velocity);
-                //Rigidbody arrowRgd = (Rigidbody)arrow.GetComponent<Rigidbody>();
-
-                //m_audioManager.PlayBowShoot();
-                //// + (m_rgd.velocity / 1))
-                //arrowRgd.AddForce((ray.direction * (m_projectileSpeed + (currentArrowForce * bowAccumulationMultiplier))), ForceMode.Impulse);
-                //m_reloadCounter = 0;
-                //currentArrowForce = 0;
-
-
-                if (Input.GetAxisRaw("FireAxis") == 0 && m_reloadCounter > m_ReloadTime)
-                {
-                    //   anim.SetTrigger("Fire");
-                    GameObject arrow = (GameObject)Instantiate(m_arrowPrefab, m_arrowSpawnpoint.position, m_player.GetComponent<Transform>().rotation);
-                    scr_projectileMovement projMovement = arrow.GetComponent<scr_projectileMovement>();
-                    projMovement.OnProjectileSpawn();
-                    projMovement.SetProjectileOriginator(this.gameObject);
-                    Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0.0f));
-                    //projMovement.AddVelocity(ray.direction, m_projectileSpeed + m_rgd.velocity);
-                    Rigidbody arrowRgd = (Rigidbody)arrow.GetComponent<Rigidbody>();
-                    arrowRgd.AddForce((ray.direction * (m_projectileSpeed + (currentArrowForce * bowAccumulationMultiplier))), ForceMode.Impulse);
-                    m_reloadCounter = 0;
-                    currentArrowForce = 0;
-                    arrowIsLoaded = false;
-                    m_audioManager.PlayBowShoot();
-                }
-
                 if (Input.GetAxisRaw("FireAxis") == 0 && m_reloadCounter > m_ReloadTime)
                 {
                     if (ropeAttachedToArrow)
@@ -274,7 +276,6 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
         {
             m_reloadCounter += Time.deltaTime;
         }
-
     }
     void LateUpdate()
     {
@@ -331,15 +332,15 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
         }
         else // om vi aimar.
         {
-            move = Vector3.zero; // när man aimar så stannar man
-            camForward = Vector3.Scale(cam.forward, new Vector3(1, 0, 1)).normalized;
-
+           // move = Vector3.zero; // när man aimar så stannar man
+            m_CamForward = Vector3.Scale(m_Cam.forward, new Vector3(1, 0, 1)).normalized;
+            m_Move = v * m_CamForward + h * m_Cam.right;
             Vector3 dir = lookPosition - transform.position;  //direktionen man tittar, 
             dir.y = 0;
 
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), 20 * Time.deltaTime);
 
-            //anim.SetFloat("Forward", v); // This should probably be for the aiming states.
+           // anim.SetFloat("Forward", v); // This should probably be for the aiming states.
             //anim.SetFloat("Turn", h);
 
         }
@@ -352,7 +353,7 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
         // pass all parameters to the character control script
         if (!currentlyDisabled)
         {
-            m_Character.Move(m_Move, crouch, m_Jump,m_sliding,m_Climbing, lookPosition, aim);
+            m_Character.Move(m_Move, crouch, m_Jump,m_sliding,GetClimbingStatus(), lookPosition, aim);
             m_Jump = false;
         }
       

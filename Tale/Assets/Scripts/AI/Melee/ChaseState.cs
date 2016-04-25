@@ -17,6 +17,8 @@ public class ChaseState : IEnemyState
     {
         BetterRay();
         Chase();
+        enemy.m_animator.SetBool("IsSearching", false);
+        enemy.m_animator.SetBool("IsAttacking", false);
     }
     public void OnTriggerEnter(Collider colli)
     {
@@ -29,10 +31,13 @@ public class ChaseState : IEnemyState
     public void ToAlertState()
     {
         enemy.currentState = enemy.alertState;
+        enemy.m_animator.SetBool("IsSearching", true);
     }
     public void ToPatrolState()
     {
         enemy.currentState = enemy.patrolState;
+        enemy.m_animator.SetBool("IsSearching", false);
+        enemy.m_animator.SetBool("IsAttacking", false);
     }
     public void ToChaseState()
     {
@@ -57,7 +62,7 @@ public class ChaseState : IEnemyState
             RaycastHit hit;
 
             // ... and if a raycast towards the player hits something...
-            if (Physics.Raycast(enemy.eyes.transform.position + enemy.eyes.transform.up, direction.normalized, out hit, enemy.m_sphereCol.radius * 2))
+            if (Physics.Raycast(enemy.eyes.transform.position + enemy.eyes.transform.up, direction.normalized, out hit, enemy.m_sphereCol.radius * 2,enemy.playerLayer))
             {
                 // ... and if the raycast hits the player...
                 if (hit.collider.gameObject.CompareTag("Player"))
@@ -77,7 +82,6 @@ public class ChaseState : IEnemyState
     }
     private void Chase()
     {
-        enemy.meshRendererFlag.material.color = Color.red;
         enemy.navMeshAgent.destination = enemy.chaseTarget.position;
         enemy.navMeshAgent.Resume();
         if (Vector3.Distance(enemy.transform.position, enemy.chaseTarget.position) < enemy.attackRange)
