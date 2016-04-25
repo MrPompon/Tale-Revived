@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d666866cc8b68554eb6e1c7ff9a06227
+timeCreated: 1461618769
+licenseType: Free
+ShaderImporter:
+  defaultTextures:
+  - _BumpMap: {fileID: 2800000, guid: fb150dd3fc9da234d8e69d412ee3a68b, type: 3}
+  - _Diffuse: {fileID: 2800000, guid: 0af4b3d882addac4b86ab23073f1bebf, type: 3}
+  - _RoughnessMap: {fileID: 2800000, guid: ae16d75ad788f79458c4d357c45dcc26, type: 3}
+  - _MetallicMap: {fileID: 2800000, guid: ad39762ad3b72f749bfaed433fefe971, type: 3}
+  - _Ambient: {fileID: 2800000, guid: 812ebc59ad028d044aea964cff5fd446, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

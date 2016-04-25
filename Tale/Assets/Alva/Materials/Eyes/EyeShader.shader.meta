@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 02dac45ef9a2b7c4aadc1cb55e56309e
+timeCreated: 1461618009
+licenseType: Free
+ShaderImporter:
+  defaultTextures:
+  - _node_4280: {fileID: 2800000, guid: e6b7defa3e6ea3b47b2352bfffc24f08, type: 3}
+  - _MetallicMap: {fileID: 2800000, guid: 221ac429cbb8de34a92518a614c430d5, type: 3}
+  - _Roughness: {fileID: 2800000, guid: 10cbd91da5246e24887800a3019501d1, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
