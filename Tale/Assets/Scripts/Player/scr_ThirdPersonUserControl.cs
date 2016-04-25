@@ -66,6 +66,7 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
 
     bool ropeAttachedToArrow;
     private scr_PSM m_psm;
+
     public float m_WallClimbingSpeed;
     private void Start()
     {
@@ -89,6 +90,14 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
         m_rgd = gameObject.GetComponent<Rigidbody>();
         m_audioManager = Camera.main.GetComponent<scr_AudioManager>();
         m_psm = m_player.GetComponent<scr_PSM>();
+
+    }
+    public bool GetCanShoot()
+    {
+        if (m_reloadCounter > m_ReloadTime)
+            return true;
+        else
+            return false;
     }
     void CheckClimbViability()
     {
@@ -120,9 +129,8 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
     {
         m_psm.SetPlayerPose(scr_PSM.PlayerPose.pose_wallclimbing);
         transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x,
-                    obj.transform.position.y + obj.GetComponent<Collider>().bounds.extents.y, transform.position.z), m_ClimbingSpeed);
+                    obj.transform.position.y + obj.GetComponent<Collider>().bounds.extents.y - 0.5f, transform.position.z), m_ClimbingSpeed);
         m_rgd.velocity = new Vector3(0, 0, 0);
-        Debug.Log(hit.normal);
       //  transform.rotation = new Quaternion(hit.normal.x, hit.normal.y,hit.normal.z, transform.rotation.w);
 
     }
@@ -135,7 +143,7 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
            localVel.y = 7;
 
            m_rgd.velocity = transform.TransformDirection(localVel);
-            
+           m_psm.SetPlayerPose(scr_PSM.PlayerPose.pose_running);
         }
     }
     void WallClimbing()
@@ -154,16 +162,26 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
 
         }
     }
+    bool GetClimbingStatus()
+    {
+        if(m_psm.GetPlayerPose(true) == scr_PSM.PlayerPose.pose_wallclimbing)
+        {
+            m_Climbing = true;
+            m_rgd.useGravity = false;
+        }
+        else
+        {
+            m_rgd.useGravity = true;
+            m_Climbing = false;
+        }
+        return m_Climbing;
+    }
     private void Update()
     {
-<<<<<<< HEAD
         CheckClimbViability();
         ClimbingJump();
         WallClimbing();
-=======
-        //CheckClimbViability();
-        //ClimbingJump();
->>>>>>> b62ddb4e36fc83e6fb34e8522d68b3222955fce7
+
 
         if (Input.GetButtonDown("ChangeEquippedArrow"))
         {
@@ -184,7 +202,7 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
         }
         if(Input.GetKey(KeyCode.T))
         {
-            m_sliding = true;
+            m_psm.SetPlayerPose(scr_PSM.PlayerPose.pose_wallclimbing);
         }
         else
         {
@@ -198,15 +216,10 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
         if (aim)
         {
             if(Input.GetMouseButtonDown(1))
-            {
                 m_audioManager.PlayDrawBow();
-            }
-
             if (Input.GetMouseButton(0) && m_reloadCounter > m_ReloadTime)
-
             print("AIM");
             if (Input.GetAxisRaw("FireAxis")>0) //load the bow
-
             {
                 arrowIsLoaded = true;
                 if (currentArrowForce < maxBowLoadupDuration)
@@ -263,7 +276,6 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
         {
             m_reloadCounter += Time.deltaTime;
         }
-
     }
     void LateUpdate()
     {
@@ -320,15 +332,15 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
         }
         else // om vi aimar.
         {
-            move = Vector3.zero; // när man aimar så stannar man
-            camForward = Vector3.Scale(cam.forward, new Vector3(1, 0, 1)).normalized;
-
+           // move = Vector3.zero; // när man aimar så stannar man
+            m_CamForward = Vector3.Scale(m_Cam.forward, new Vector3(1, 0, 1)).normalized;
+            m_Move = v * m_CamForward + h * m_Cam.right;
             Vector3 dir = lookPosition - transform.position;  //direktionen man tittar, 
             dir.y = 0;
 
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), 20 * Time.deltaTime);
 
-            //anim.SetFloat("Forward", v); // This should probably be for the aiming states.
+           // anim.SetFloat("Forward", v); // This should probably be for the aiming states.
             //anim.SetFloat("Turn", h);
 
         }
@@ -341,7 +353,7 @@ public class scr_ThirdPersonUserControl : MonoBehaviour
         // pass all parameters to the character control script
         if (!currentlyDisabled)
         {
-            m_Character.Move(m_Move, crouch, m_Jump,m_sliding,m_Climbing, lookPosition, aim);
+            m_Character.Move(m_Move, crouch, m_Jump,m_sliding,GetClimbingStatus(), lookPosition, aim);
             m_Jump = false;
         }
       
