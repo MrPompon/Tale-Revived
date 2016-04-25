@@ -31,6 +31,13 @@ public class StatePatternEnemy : MonoBehaviour {
 
     Vector2 smoothDeltaPosition = Vector2.zero;
     Vector2 velocity = Vector2.zero;
+
+    Vector3 frameRootPos;
+    Vector3 prevFrameRootPos;
+    Vector3 rootVelocity;
+    [HideInInspector]
+    public NavMeshAgent navMeshAgent;
+
     [HideInInspector]public Transform chaseTarget;
     [HideInInspector]public IEnemyState currentState;
     [HideInInspector]public AlertState alertState;
@@ -38,7 +45,7 @@ public class StatePatternEnemy : MonoBehaviour {
     [HideInInspector]public PatrolState patrolState;
     [HideInInspector]public AttackState attackState;
     [HideInInspector]public RetreatState retreatState;
-    [HideInInspector]public NavMeshAgent navMeshAgent;
+
     private void Awake()
     {
         prevFramePos = this.transform.position;
@@ -54,6 +61,7 @@ public class StatePatternEnemy : MonoBehaviour {
         weaponSwingRenderer = GetComponent<LineRenderer>();
         m_sphereCol = GetComponent<SphereCollider>();
         m_animator = GetComponent<Animator>();
+        m_animator.applyRootMotion = true;
     }
 	void Start () {
         chaseTarget = GameObject.FindGameObjectWithTag("Player").transform;
@@ -116,12 +124,30 @@ public class StatePatternEnemy : MonoBehaviour {
         bool shouldMove = velocity.magnitude > 0.5f && navMeshAgent.remainingDistance > navMeshAgent.radius;
 
         // Update animation parameters
+        RootVelocityCalculation();
         m_animator.SetBool("shouldMove", shouldMove);
-        m_animator.SetFloat("Forward", velocity.y);
+        m_animator.SetFloat("Forward", velocity.y-rootVelocity.z);
+       
+        //print(velocity.y-rootVelocity.z);
+        //print(rootVelocity);
         m_animator.SetFloat("Turn", navMeshAgent.velocity.x);
         //print(velocity);
         prevFramePos = this.transform.position;
         UpdateClipLength();
+        //m_animator.rootPosition
+    }
+    void RootVelocityCalculation()
+    {
+        frameRootPos = m_animator.rootPosition;
+        rootVelocity = prevFrameRootPos - frameRootPos ;
+        prevFrameRootPos = m_animator.rootPosition;
+    }
+    public void ScaleAnimationSpeedToFloat(float p_float)
+    {
+        AnimatorStateInfo state = m_animator.GetCurrentAnimatorStateInfo(0);
+        float animLength = state.length;
+        m_animator.speed = animLength / p_float;
+        print("animLength/p_float");
     }
     IEnumerator UpdateClipLength()
     {

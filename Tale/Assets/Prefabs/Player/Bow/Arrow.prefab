@@ -45,7 +45,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 4a36ae71b48f14d6fb2eae31da682a32, type: 2}
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131120}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 87295b783d510054f873c333c081f9bc, type: 3}
   m_Name: 
@@ -178,7 +178,7 @@ MonoBehaviour:
   livingLayer:
     serializedVersion: 2
     m_Bits: 8192
-  arrowStuckDuration: 999
+  arrowStuckDuration: 35
   orginArrowSoarDuration: 5
   arrowDamage: 2
   playerRopeAttachPoint: {fileID: 190654, guid: ce1598cb56f47004ea610ce31624f524,

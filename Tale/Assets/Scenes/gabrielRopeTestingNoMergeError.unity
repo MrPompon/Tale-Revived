@@ -163,6 +163,381 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 53c08ba0155bef046a74afb79a94f5e7, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &148630546
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 12.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -88
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 23.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1555727542}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 874384552}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1307356461}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 1403315964}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 675697405}
+    - target: {fileID: 144672, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_Name
+      value: TrooperMeleeAnimAi (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436326, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: destructPartLifeTime
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 12050004, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &169690971
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 12.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -88
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 26.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1555727542}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 874384552}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1307356461}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 1403315964}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 675697405}
+    - target: {fileID: 144672, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_Name
+      value: TrooperMeleeAnimAi (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436326, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: destructPartLifeTime
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 12050004, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &174682731
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 19.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -88
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 38.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1555727542}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 874384552}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1307356461}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 1403315964}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 675697405}
+    - target: {fileID: 144672, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_Name
+      value: TrooperMeleeAnimAi (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436326, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: destructPartLifeTime
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 12050004, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &187260814
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -88
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1555727542}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 874384552}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1307356461}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 1403315964}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 675697405}
+    - target: {fileID: 144672, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_Name
+      value: TrooperMeleeAnimAi (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436326, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: destructPartLifeTime
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 12050004, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &223366390
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 223366391}
+  - 33: {fileID: 223366395}
+  - 65: {fileID: 223366394}
+  - 23: {fileID: 223366393}
+  - 54: {fileID: 223366392}
+  m_Layer: 16
+  m_Name: Cube (37)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &223366391
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 223366390}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -95.3, y: 7.9000015, z: -12.5}
+  m_LocalScale: {x: 50, y: 50, z: 5}
+  m_Children: []
+  m_Father: {fileID: 592194181}
+  m_RootOrder: 18
+--- !u!54 &223366392
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 223366390}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!23 &223366393
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 223366390}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 8ac594c355de84247a80b8a2ed030572, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!65 &223366394
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 223366390}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &223366395
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 223366390}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &240802717
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,6 +629,148 @@ Transform:
   m_Children: []
   m_Father: {fileID: 592194181}
   m_RootOrder: 11
+--- !u!1001 &246521516
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 12.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -88
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1555727542}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 874384552}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1307356461}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 1403315964}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 675697405}
+    - target: {fileID: 144672, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_Name
+      value: TrooperMeleeAnimAi (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436326, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: destructPartLifeTime
+      value: 60
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 12050004, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &259501801
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -88
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1555727542}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 874384552}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1307356461}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 1403315964}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 675697405}
+    - target: {fileID: 144672, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_Name
+      value: TrooperMeleeAnimAi (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436326, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: destructPartLifeTime
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 12050004, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_IsPrefabParent: 0
 --- !u!4 &298461429 stripped
 Transform:
   m_PrefabParentObject: {fileID: 464608, guid: e9abcde77942c094684dc024614dec22, type: 2}
@@ -620,7 +1137,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 486814242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -29.284004, y: 7.9000015, z: -14.048996}
+  m_LocalPosition: {x: -29.284004, y: 7.9000015, z: 52.9}
   m_LocalScale: {x: 50, y: 50, z: 5}
   m_Children: []
   m_Father: {fileID: 592194181}
@@ -730,6 +1247,7 @@ Transform:
   - {fileID: 1369177717}
   - {fileID: 644649334}
   - {fileID: 1503460837}
+  - {fileID: 223366391}
   m_Father: {fileID: 0}
   m_RootOrder: 4
 --- !u!1 &644649333
@@ -765,6 +1283,77 @@ Transform:
   - {fileID: 1495173097}
   m_Father: {fileID: 592194181}
   m_RootOrder: 16
+--- !u!1001 &664506819
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -88
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 23.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1555727542}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 874384552}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1307356461}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 1403315964}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 675697405}
+    - target: {fileID: 144672, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_Name
+      value: TrooperMeleeAnimAi (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436326, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: destructPartLifeTime
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 12050004, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &675697404
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,7 +1376,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 675697404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -35}
+  m_LocalPosition: {x: 0, y: 0, z: 56.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1810920283}
@@ -938,6 +1527,10 @@ Prefab:
     - {fileID: 2340582, guid: 7af2f2712d865d743a791d6fddd93cf8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 7af2f2712d865d743a791d6fddd93cf8, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &866094114 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 407266, guid: 4afb9b98e3765064591b7959b6166eaa, type: 2}
+  m_PrefabInternal: {fileID: 1413742254}
 --- !u!1 &874384551
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,15 +1553,231 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 874384551}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -49, y: 0, z: 0}
+  m_LocalPosition: {x: -49, y: -1.8, z: -11.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1810920283}
   m_RootOrder: 1
+--- !u!1001 &907377100
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 64.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -89
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -177.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 144672, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_Name
+      value: TrooperMeleeAnimAi (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1555727542}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 874384552}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1307356461}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 1403315964}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 675697405}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: attackDuration
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 144672, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_IsPrefabParent: 0
 --- !u!4 &957030956 stripped
 Transform:
   m_PrefabParentObject: {fileID: 484344, guid: 53c08ba0155bef046a74afb79a94f5e7, type: 2}
   m_PrefabInternal: {fileID: 801354306}
+--- !u!1001 &1027737404
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 12.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -88
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1555727542}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 874384552}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1307356461}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 1403315964}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 675697405}
+    - target: {fileID: 144672, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_Name
+      value: TrooperMeleeAnimAi (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436326, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: destructPartLifeTime
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 12050004, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1097217454
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -88
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 38.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1555727542}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 874384552}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1307356461}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 1403315964}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 675697405}
+    - target: {fileID: 144672, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_Name
+      value: TrooperMeleeAnimAi (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436326, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: destructPartLifeTime
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 12050004, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_IsPrefabParent: 0
 --- !u!4 &1138668563 stripped
 Transform:
   m_PrefabParentObject: {fileID: 484344, guid: 53c08ba0155bef046a74afb79a94f5e7, type: 2}
@@ -1090,11 +1899,97 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1307356460}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 40.4}
+  m_LocalPosition: {x: 0, y: 0, z: 9.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1810920283}
   m_RootOrder: 2
+--- !u!1001 &1318207978
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 64.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -89
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -133.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 144672, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_Name
+      value: TrooperMeleeAnimAi (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1555727542}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 874384552}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1307356461}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 1403315964}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 675697405}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: attackDuration
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 144672, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1336753112
 GameObject:
   m_ObjectHideFlags: 0
@@ -1182,7 +2077,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1403315963}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 41.9, y: 0, z: 0}
+  m_LocalPosition: {x: 38.7, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1810920283}
@@ -1196,15 +2091,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 411686, guid: 4afb9b98e3765064591b7959b6166eaa, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 58.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 411686, guid: 4afb9b98e3765064591b7959b6166eaa, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -83.1
+      value: -88.43
       objectReference: {fileID: 0}
     - target: {fileID: 411686, guid: 4afb9b98e3765064591b7959b6166eaa, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -119.1
+      value: 2.6
       objectReference: {fileID: 0}
     - target: {fileID: 411686, guid: 4afb9b98e3765064591b7959b6166eaa, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1228,19 +2123,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 479532, guid: 4afb9b98e3765064591b7959b6166eaa, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.53267515
+      value: 0.5326752
       objectReference: {fileID: 0}
     - target: {fileID: 479532, guid: 4afb9b98e3765064591b7959b6166eaa, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.07034045
+      value: 0.070340455
       objectReference: {fileID: 0}
     - target: {fileID: 479532, guid: 4afb9b98e3765064591b7959b6166eaa, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0.83613265
+      value: 0.83613276
       objectReference: {fileID: 0}
     - target: {fileID: 479532, guid: 4afb9b98e3765064591b7959b6166eaa, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -0.11041513
+      value: -0.110415146
       objectReference: {fileID: 0}
     - target: {fileID: 12061280, guid: 4afb9b98e3765064591b7959b6166eaa, type: 2}
       propertyPath: m_Materials.Array.data[0]
@@ -1578,10 +2473,94 @@ Prefab:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 8220536, guid: 4afb9b98e3765064591b7959b6166eaa, type: 2}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11426850, guid: 4afb9b98e3765064591b7959b6166eaa, type: 2}
+      propertyPath: maxTetherLength
+      value: 140
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436610, guid: 4afb9b98e3765064591b7959b6166eaa, type: 2}
+      propertyPath: m_InAirMovementSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436610, guid: 4afb9b98e3765064591b7959b6166eaa, type: 2}
+      propertyPath: m_InAirMaxSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436610, guid: 4afb9b98e3765064591b7959b6166eaa, type: 2}
+      propertyPath: m_JumpPower
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436610, guid: 4afb9b98e3765064591b7959b6166eaa, type: 2}
+      propertyPath: m_GravityMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11426850, guid: 4afb9b98e3765064591b7959b6166eaa, type: 2}
+      propertyPath: detachJumpPowerUpwardForce
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11426850, guid: 4afb9b98e3765064591b7959b6166eaa, type: 2}
+      propertyPath: detachJumpPowerForwardForce
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11426850, guid: 4afb9b98e3765064591b7959b6166eaa, type: 2}
+      propertyPath: playerBody
+      value: 
+      objectReference: {fileID: 866094114}
+    - target: {fileID: 486032, guid: 4afb9b98e3765064591b7959b6166eaa, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 459492, guid: 4afb9b98e3765064591b7959b6166eaa, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 486032, guid: 4afb9b98e3765064591b7959b6166eaa, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 459492, guid: 4afb9b98e3765064591b7959b6166eaa, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 443258, guid: 4afb9b98e3765064591b7959b6166eaa, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 481946, guid: 4afb9b98e3765064591b7959b6166eaa, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 486032, guid: 4afb9b98e3765064591b7959b6166eaa, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 481866, guid: 4afb9b98e3765064591b7959b6166eaa, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 459492, guid: 4afb9b98e3765064591b7959b6166eaa, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 11426850, guid: 4afb9b98e3765064591b7959b6166eaa, type: 2}
+      propertyPath: downwardAcc
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436610, guid: 4afb9b98e3765064591b7959b6166eaa, type: 2}
+      propertyPath: m_GroundCheckDistance
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5407146, guid: 4afb9b98e3765064591b7959b6166eaa, type: 2}
+      propertyPath: m_AngularDrag
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4afb9b98e3765064591b7959b6166eaa, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &1425514386
+--- !u!1001 &1421710671
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1590,15 +2569,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 43.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -89
+      value: -88
       objectReference: {fileID: 0}
     - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -84
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1618,11 +2597,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
       propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 144672, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
-      propertyPath: m_Name
-      value: TrooperMeleeAnimAi
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
       propertyPath: waypoints.Array.data[0]
@@ -1644,11 +2619,87 @@ Prefab:
       propertyPath: waypoints.Array.data[4]
       value: 
       objectReference: {fileID: 675697405}
-    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
-      propertyPath: attackDuration
-      value: 2.2
+    - target: {fileID: 144672, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_Name
+      value: TrooperMeleeAnimAi (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11436326, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: destructPartLifeTime
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 12050004, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1425514386
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -88
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1555727542}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 874384552}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1307356461}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 1403315964}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 675697405}
+    - target: {fileID: 144672, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_Name
+      value: TrooperMeleeAnimAi
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436326, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: destructPartLifeTime
+      value: 60
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 12050004, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1440339727
@@ -1720,6 +2771,77 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 53c08ba0155bef046a74afb79a94f5e7, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1461720524
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -88
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 26.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1555727542}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 874384552}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1307356461}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 1403315964}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 675697405}
+    - target: {fileID: 144672, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_Name
+      value: TrooperMeleeAnimAi (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436326, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: destructPartLifeTime
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 12050004, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1465372628
 GameObject:
@@ -1858,8 +2980,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1480095066}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.084, y: 41.1, z: -17.249}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalPosition: {x: -22.084, y: 11.2, z: 24}
+  m_LocalScale: {x: 500, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 592194181}
   m_RootOrder: 4
@@ -1963,6 +3085,77 @@ Transform:
   m_Children: []
   m_Father: {fileID: 592194181}
   m_RootOrder: 17
+--- !u!1001 &1512068590
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 6.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -88
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 38.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1555727542}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 874384552}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1307356461}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 1403315964}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 675697405}
+    - target: {fileID: 144672, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_Name
+      value: TrooperMeleeAnimAi (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436326, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: destructPartLifeTime
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 12050004, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1555727541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1985,11 +3178,153 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1555727541}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 34.61, y: 4.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1810920283}
   m_RootOrder: 0
+--- !u!1001 &1564496870
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 12.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -88
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 17.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1555727542}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 874384552}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1307356461}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 1403315964}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 675697405}
+    - target: {fileID: 144672, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_Name
+      value: TrooperMeleeAnimAi (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436326, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: destructPartLifeTime
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 12050004, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1573305903
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 12.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -88
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_RootOrder
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1555727542}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 874384552}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1307356461}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 1403315964}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 675697405}
+    - target: {fileID: 144672, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_Name
+      value: TrooperMeleeAnimAi (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436326, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: destructPartLifeTime
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 12050004, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1603595774
 GameObject:
   m_ObjectHideFlags: 0
@@ -2269,6 +3604,151 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e9abcde77942c094684dc024614dec22, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &1648539633
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 12.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -88
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1555727542}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 874384552}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1307356461}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 1403315964}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 675697405}
+    - target: {fileID: 144672, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_Name
+      value: TrooperMeleeAnimAi (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436326, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: destructPartLifeTime
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 12050004, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1657501375
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 64.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -89
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -84
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 144672, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_Name
+      value: TrooperMeleeAnimAi (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1555727542}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 874384552}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1307356461}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 1403315964}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 675697405}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: attackDuration
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 144672, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1679848919
 GameObject:
   m_ObjectHideFlags: 0
@@ -2508,6 +3988,77 @@ Transform:
   m_Children: []
   m_Father: {fileID: 592194181}
   m_RootOrder: 7
+--- !u!1001 &1720676241
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -88
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 17.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1555727542}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 874384552}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1307356461}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 1403315964}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 675697405}
+    - target: {fileID: 144672, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_Name
+      value: TrooperMeleeAnimAi (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436326, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: destructPartLifeTime
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 12050004, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1744920841
 GameObject:
   m_ObjectHideFlags: 0
@@ -2644,6 +4195,77 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea14cd15e3ff8734893ebde5c69f5870, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1789843450
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 12.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -88
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 38.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 458568, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1555727542}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 874384552}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1307356461}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 1403315964}
+    - target: {fileID: 11401682, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: waypoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 675697405}
+    - target: {fileID: 144672, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: m_Name
+      value: TrooperMeleeAnimAi (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436326, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+      propertyPath: destructPartLifeTime
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 12050004, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 7cda361124403cd4897b257bf42e1b41, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1810920282
 GameObject:

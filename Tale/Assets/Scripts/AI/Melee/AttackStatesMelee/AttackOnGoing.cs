@@ -36,6 +36,7 @@ public class AttackOnGoing : IAttackStates {
     }
     public void UpdateState()
     {
+        enemy.navMeshAgent.Stop();
         if (!hasAttacked)
         {
             enemy.m_animator.SetBool("IsAttacking", true);
