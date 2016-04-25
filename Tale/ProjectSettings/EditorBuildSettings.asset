@@ -31,5 +31,7 @@ EditorBuildSettings:
     path: Assets/SampleScenes/Scenes/RollerBall.unity
   - enabled: 0
     path: Assets/Scenes/AniamtionAndCameraTestScene/AnimationAndCameraTestScene.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/gabrielRopeTestingNoMergeError.unity
+  - enabled: 1
+    path: Assets/Scenes/Lucas_map_22_april.unity
